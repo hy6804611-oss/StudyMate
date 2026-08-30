@@ -1,0 +1,762 @@
+/* =========================================================
+   STUDYMATE CBT EXAM
+   CLEAN PREMIUM STYLE
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071A52,
+            #0B3D91,
+            #1565C0
+        );
+}
+
+
+/* =========================================================
+   MAIN EXAM CONTAINER
+   ========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 850px;
+
+    background: #ffffff;
+
+    border-radius: 28px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+h1 {
+    color: #1565C0;
+
+    font-size: 38px;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+.progress-bar {
+    width: 100%;
+
+    height: 12px;
+
+    background: #e2e8f0;
+
+    border-radius: 20px;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1565C0,
+            #2563EB,
+            #00A8E8
+        );
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================================================
+   TIMER
+   ========================================================= */
+
+#timer {
+    width: 160px;
+
+    margin: 0 auto 25px;
+
+    padding: 12px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    background: #1565C0;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 20px rgba(21, 101, 192, 0.25);
+}
+
+
+/* =========================================================
+   SUBJECT TABS
+   These remain the small tabs at the top.
+   ========================================================= */
+
+.subject-tabs {
+    width: 100%;
+
+    display: flex;
+
+    gap: 12px;
+
+    overflow-x: auto;
+
+    margin: 20px 0;
+
+    padding: 5px 3px 12px;
+
+    scrollbar-width: none;
+}
+
+.subject-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   NORMAL SUBJECT TAB
+   ========================================================= */
+
+.subject-tab {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    min-width: 125px;
+
+    padding: 12px 18px;
+
+    border: 1px solid #cbdff8;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef6ff,
+            #dbeafe
+        );
+
+    color: #1565C0;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 14px rgba(21, 101, 192, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   TAB HOVER
+   ========================================================= */
+
+.subject-tab:hover {
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #bfdbfe
+        );
+
+    border-color: #93c5fd;
+
+    color: #0B3D91;
+
+    box-shadow:
+        0 8px 18px rgba(21, 101, 192, 0.18);
+}
+
+
+/* =========================================================
+   SELECTED / CURRENT SUBJECT TAB
+   ========================================================= */
+
+.subject-tab.active {
+    background:
+        linear-gradient(
+            135deg,
+            #1565C0,
+            #2563EB,
+            #168DE2
+        );
+
+    color: #ffffff;
+
+    border: 2px solid #00E5FF;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.35),
+        0 0 16px rgba(0, 229, 255, 0.45);
+
+    animation: activeSubjectGlow 1.8s ease-in-out infinite alternate;
+}
+
+
+/* =========================================================
+   CURRENT TAB GLOW
+   Only the subject currently being written stands out.
+   ========================================================= */
+
+@keyframes activeSubjectGlow {
+    from {
+        box-shadow:
+            0 8px 20px rgba(37, 99, 235, 0.30),
+            0 0 10px rgba(0, 229, 255, 0.30);
+    }
+
+    to {
+        box-shadow:
+            0 9px 22px rgba(37, 99, 235, 0.40),
+            0 0 22px rgba(0, 229, 255, 0.65);
+    }
+}
+
+
+/* =========================================================
+   TAB PRESS
+   ========================================================= */
+
+.subject-tab:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   SUBJECT ICON + TEXT
+   Works with:
+   📘 <span>Mathematics</span>
+   ========================================================= */
+
+.subject-tab span {
+    margin-left: 4px;
+}
+
+
+/* =========================================================
+   CURRENT SUBJECT DISPLAY
+   ========================================================= */
+
+.current-subject {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    padding: 16px;
+
+    margin-bottom: 20px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0B3D91,
+            #1565C0,
+            #168DE2
+        );
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    border: 1px solid rgba(147, 197, 253, 0.65);
+
+    box-shadow:
+        0 10px 25px rgba(21, 101, 192, 0.25),
+        0 0 18px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================================
+   CURRENT SUBJECT LIGHT
+   ========================================================= */
+
+.current-subject::after {
+    content: "";
+
+    position: absolute;
+
+    top: -60%;
+
+    left: -80%;
+
+    width: 45%;
+
+    height: 220%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.28),
+            transparent
+        );
+
+    transform: rotate(18deg);
+
+    pointer-events: none;
+
+    animation: currentSubjectShine 5s ease-in-out infinite;
+}
+
+@keyframes currentSubjectShine {
+    0% {
+        left: -80%;
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    65% {
+        left: 130%;
+        opacity: 0.7;
+    }
+
+    100% {
+        left: 130%;
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   QUESTION NUMBER
+   ========================================================= */
+
+#questionNumber {
+    margin-top: 15px;
+
+    font-size: 20px;
+
+    color: #555;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   QUESTION
+   ========================================================= */
+
+#question {
+    margin-top: 20px;
+
+    font-size: 26px;
+
+    color: #222;
+
+    line-height: 1.6;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   OPTIONS
+   ========================================================= */
+
+.options {
+    margin-top: 30px;
+
+    display: grid;
+
+    gap: 15px;
+}
+
+.option {
+    background: #f4f7ff;
+
+    border: 2px solid transparent;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+
+    font-size: 19px;
+
+    font-weight: 500;
+}
+
+.option:hover {
+    border-color: #1565C0;
+
+    transform: translateY(-2px);
+}
+
+.option.selected {
+    background: #1565C0;
+
+    color: #ffffff;
+
+    border-color: #1565C0;
+
+    box-shadow:
+        0 6px 15px rgba(21, 101, 192, 0.25);
+}
+
+
+/* =========================================================
+   PREVIOUS / NEXT
+   ========================================================= */
+
+.buttons {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 35px;
+
+    gap: 15px;
+}
+
+.buttons button {
+    flex: 1;
+
+    border: none;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+#previousBtn {
+    background: #6c757d;
+
+    color: #ffffff;
+}
+
+#nextBtn {
+    background: #1565C0;
+
+    color: #ffffff;
+}
+
+.buttons button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   QUESTION PALETTE
+   ========================================================= */
+
+.question-palette {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 10px;
+
+    margin-top: 22px;
+
+    padding: 16px;
+
+    background: #f4f8ff;
+
+    border-radius: 18px;
+
+    border: 1px solid #dbeafe;
+}
+
+.question-box {
+    padding: 11px 5px;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    text-align: center;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    border: 2px solid #dbeafe;
+
+    transition: 0.25s ease;
+}
+
+.question-box:hover {
+    border-color: #60a5fa;
+
+    transform: translateY(-2px);
+}
+
+.question-box.active {
+    background:
+        linear-gradient(
+            135deg,
+            #3b82f6,
+            #2563eb
+        );
+
+    color: #ffffff;
+
+    border-color: #60a5fa;
+
+    box-shadow:
+        0 0 12px rgba(37, 99, 235, 0.45);
+}
+
+.question-box.answered {
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+    color: #ffffff;
+
+    border-color: #86efac;
+
+    box-shadow:
+        0 0 10px rgba(34, 197, 94, 0.30);
+}
+
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+#submitBtn {
+    width: 100%;
+
+    margin-top: 22px;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+    box-shadow:
+        0 8px 18px rgba(22, 163, 74, 0.25);
+}
+
+#submitBtn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(22, 163, 74, 0.30);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 14px;
+    }
+
+    .container {
+        padding: 22px 18px;
+
+        border-radius: 24px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    #timer {
+        width: 145px;
+
+        font-size: 21px;
+    }
+
+    .subject-tabs {
+        gap: 9px;
+    }
+
+    .subject-tab {
+        min-width: 115px;
+
+        padding: 11px 15px;
+
+        font-size: 14px;
+
+        border-radius: 18px;
+    }
+
+    .current-subject {
+        font-size: 19px;
+
+        padding: 14px;
+    }
+
+    #question {
+        font-size: 21px;
+    }
+
+    .option {
+        padding: 15px;
+
+        font-size: 17px;
+    }
+
+    .buttons button {
+        padding: 15px;
+
+        font-size: 16px;
+    }
+
+    .question-palette {
+        grid-template-columns: repeat(5, 1fr);
+
+        gap: 8px;
+
+        padding: 12px;
+    }
+
+    .question-box {
+        padding: 9px 4px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .subject-tab {
+        min-width: 105px;
+
+        padding: 10px 13px;
+
+        font-size: 13px;
+    }
+
+    #question {
+        font-size: 19px;
+    }
+
+    .option {
+        font-size: 16px;
+    }
+}

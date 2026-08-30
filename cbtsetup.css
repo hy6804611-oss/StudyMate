@@ -1,0 +1,991 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+background:linear-gradient(135deg,#071A52,#0B3D91,#1565C0);
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.container{
+
+width:100%;
+max-width:500px;
+
+background:#ffffff;
+
+border-radius:28px;
+
+padding:35px 25px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+animation:fadeIn .4s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+h1{
+
+text-align:center;
+
+color:#1565C0;
+
+font-size:32px;
+
+margin-bottom:12px;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+color:#666;
+
+font-size:17px;
+
+margin-bottom:30px;
+
+line-height:1.6;
+
+}
+
+.time-options{
+
+display:grid;
+
+gap:15px;
+
+margin-bottom:30px;
+
+}
+
+.timeBtn{
+
+padding:18px;
+
+border:none;
+
+border-radius:18px;
+
+background:#28459a;
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.timeBtn:hover{
+
+transform:translateY(-3px);
+
+}
+
+.timeBtn.selected{
+
+background:#1565C0;
+
+border:3px solid #00E5FF;
+
+box-shadow:0 0 20px rgba(0,229,255,.6);
+
+}
+
+#continueBtn{
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+border-radius:18px;
+
+background:#1565C0;
+
+color:white;
+
+font-size:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#continueBtn:disabled{
+
+background:#9aa5b1;
+
+cursor:not-allowed;
+
+}
+/* =========================================
+   STUDYMATE CBT SETUP
+   PREMIUM CRYSTAL BLUE GLOW
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at 15% 5%,
+            rgba(37, 99, 235, 0.35),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 25%,
+            rgba(0, 229, 255, 0.16),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(59, 130, 246, 0.20),
+            transparent 38%
+        ),
+        linear-gradient(
+            180deg,
+            #06142f 0%,
+            #071a3d 48%,
+            #041127 100%
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   MAIN CBT SETUP CARD
+========================================= */
+
+.container {
+
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 500px;
+
+    padding: 35px 25px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(19, 61, 134, 0.98),
+            rgba(28, 85, 181, 0.98) 48%,
+            rgba(37, 99, 235, 0.98)
+        );
+
+    border: 1px solid rgba(147, 197, 253, 0.55);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.42),
+        0 0 20px rgba(37, 99, 235, 0.35),
+        0 0 55px rgba(37, 99, 235, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.20),
+        inset 0 -20px 35px rgba(4, 20, 55, 0.15);
+
+    animation: setupFade 0.55s ease;
+
+    isolation: isolate;
+}
+
+
+/* =========================================
+   CRYSTAL LIGHT REFLECTION
+========================================= */
+
+.container::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    top: -125px;
+    right: -90px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.20),
+            rgba(255, 255, 255, 0.06) 45%,
+            transparent 72%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   SECOND LIGHT REFLECTION
+========================================= */
+
+.container::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 100px;
+
+    left: -100px;
+    bottom: -45px;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(96, 165, 250, 0.20),
+            transparent 70%
+        );
+
+    transform: rotate(-12deg);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* Keep content above glow */
+
+.container > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+h1 {
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 32px;
+
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+
+    font-weight: 800;
+
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.25),
+        0 0 18px rgba(147, 197, 253, 0.25);
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.subtitle {
+
+    text-align: center;
+
+    color: #dbeafe;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+
+    line-height: 1.6;
+
+    font-weight: 400;
+
+    text-shadow:
+        0 1px 6px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================
+   TIME OPTIONS
+========================================= */
+
+.time-options {
+
+    display: grid;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   TIME BUTTONS
+========================================= */
+
+.timeBtn {
+
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+
+    padding: 18px;
+
+    border: 1px solid rgba(147, 197, 253, 0.35);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17479d,
+            #2563eb
+        );
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.24),
+        0 0 15px rgba(37, 99, 235, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* Button shine */
+
+.timeBtn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            110deg,
+            transparent,
+            rgba(255, 255, 255, 0.16),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.55s ease;
+
+    pointer-events: none;
+}
+
+.timeBtn:hover::before {
+    left: 140%;
+}
+
+
+/* Hover */
+
+.timeBtn:hover {
+
+    transform: translateY(-4px);
+
+    border-color: rgba(147, 197, 253, 0.75);
+
+    box-shadow:
+        0 13px 28px rgba(0, 0, 0, 0.28),
+        0 0 25px rgba(59, 130, 246, 0.42),
+        0 0 45px rgba(37, 99, 235, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.20);
+}
+
+
+/* Press */
+
+.timeBtn:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================
+   SELECTED TIME
+========================================= */
+
+.timeBtn.selected {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1675d1,
+            #168de2
+        );
+
+    border: 3px solid #00e5ff;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.28),
+        0 0 18px rgba(0, 229, 255, 0.65),
+        0 0 42px rgba(0, 229, 255, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+    animation: selectedGlow 1.8s ease-in-out infinite alternate;
+}
+
+
+/* =========================================
+   CONTINUE BUTTON
+========================================= */
+
+#continueBtn {
+
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+
+    padding: 18px;
+
+    border: 1px solid rgba(147, 197, 253, 0.40);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b82f6,
+            #2563eb,
+            #1d4ed8
+        );
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.28),
+        0 0 20px rgba(59, 130, 246, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Continue button shine */
+
+#continueBtn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            110deg,
+            transparent,
+            rgba(255, 255, 255, 0.20),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+
+    pointer-events: none;
+}
+
+#continueBtn:hover::before {
+    left: 140%;
+}
+
+
+/* Continue hover */
+
+#continueBtn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 32px rgba(0, 0, 0, 0.32),
+        0 0 28px rgba(59, 130, 246, 0.50),
+        0 0 55px rgba(37, 99, 235, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+
+/* Continue press */
+
+#continueBtn:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================
+   DISABLED CONTINUE
+========================================= */
+
+#continueBtn:disabled {
+
+    background:
+        linear-gradient(
+            135deg,
+            #536784,
+            #64748b
+        );
+
+    border-color: rgba(255,255,255,0.12);
+
+    color: #cbd5e1;
+
+    cursor: not-allowed;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,0.18);
+
+    transform: none;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes setupFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+@keyframes selectedGlow {
+
+    from {
+        box-shadow:
+            0 10px 25px rgba(0,0,0,0.28),
+            0 0 16px rgba(0,229,255,0.45),
+            0 0 30px rgba(0,229,255,0.20);
+    }
+
+    to {
+        box-shadow:
+            0 12px 28px rgba(0,0,0,0.30),
+            0 0 24px rgba(0,229,255,0.75),
+            0 0 48px rgba(0,229,255,0.38);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 18px;
+    }
+
+    .container {
+        max-width: 500px;
+
+        padding:
+            32px
+            22px;
+
+        border-radius: 27px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .timeBtn {
+        padding: 17px;
+
+        font-size: 17px;
+    }
+
+    #continueBtn {
+        padding: 17px;
+
+        font-size: 19px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 14px;
+    }
+
+    .container {
+        padding:
+            27px
+            18px;
+
+        border-radius: 24px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+
+        margin-bottom: 24px;
+    }
+
+    .time-options {
+        gap: 12px;
+
+        margin-bottom: 24px;
+    }
+
+    .timeBtn {
+        padding: 15px;
+
+        font-size: 16px;
+    }
+
+    #continueBtn {
+        padding: 16px;
+
+        font-size: 18px;
+    }
+}
+/* =========================================================
+   ✨ STUDYMATE CBT — SHINING SUBJECT CARDS
+   ========================================================= */
+
+.subject-card {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2855b8 0%,
+            #3169d4 35%,
+            #2878ee 65%,
+            #1d5fd0 100%
+        ) !important;
+
+    border: 2px solid rgba(132, 199, 255, 0.65) !important;
+    border-radius: 24px !important;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.28),
+        0 0 12px rgba(52, 130, 246, 0.45),
+        0 0 30px rgba(37, 99, 235, 0.25),
+        inset 0 2px 0 rgba(255, 255, 255, 0.30),
+        inset 0 -18px 25px rgba(0, 35, 110, 0.16) !important;
+
+    isolation: isolate;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* =========================================================
+   💎 BRIGHT GLASS HIGHLIGHT
+   ========================================================= */
+
+.subject-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -90px;
+    left: -40px;
+
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.32) 0%,
+            rgba(255, 255, 255, 0.14) 32%,
+            rgba(255, 255, 255, 0.04) 58%,
+            transparent 72%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   ✨ GLOSSY LIGHT STREAK
+   ========================================================= */
+
+.subject-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: -20%;
+    left: -80%;
+
+    width: 55%;
+    height: 150%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.16),
+            rgba(255, 255, 255, 0.30),
+            rgba(255, 255, 255, 0.10),
+            transparent
+        );
+
+    transform: rotate(18deg);
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation: subjectShine 4.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   🌟 CONTENT STAYS ABOVE THE SHINE
+   ========================================================= */
+
+.subject-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   📚 ICON
+   ========================================================= */
+
+.subject-card .subject-icon {
+    font-size: 48px;
+
+    filter:
+        drop-shadow(0 5px 7px rgba(0, 0, 0, 0.30))
+        drop-shadow(0 0 12px rgba(180, 225, 255, 0.45));
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+/* =========================================================
+   📝 TEXT
+   ========================================================= */
+
+.subject-card p {
+    color: #ffffff !important;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.30),
+        0 0 8px rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   👆 TOUCH / HOVER
+   ========================================================= */
+
+.subject-card:hover {
+    transform: translateY(-6px) scale(1.015);
+
+    border-color: rgba(190, 230, 255, 0.95) !important;
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.35),
+        0 0 18px rgba(75, 160, 255, 0.75),
+        0 0 45px rgba(37, 99, 235, 0.40),
+        0 0 70px rgba(59, 130, 246, 0.18),
+        inset 0 2px 0 rgba(255, 255, 255, 0.40),
+        inset 0 -18px 28px rgba(0, 35, 110, 0.10) !important;
+}
+
+.subject-card:hover .subject-icon {
+    transform: scale(1.10);
+
+    filter:
+        drop-shadow(0 5px 8px rgba(0, 0, 0, 0.30))
+        drop-shadow(0 0 18px rgba(190, 230, 255, 0.75));
+}
+
+
+/* =========================================================
+   👆 PRESS EFFECT
+   ========================================================= */
+
+.subject-card:active {
+    transform: scale(0.96);
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.28),
+        0 0 20px rgba(59, 130, 246, 0.45),
+        inset 0 5px 15px rgba(0, 30, 100, 0.18) !important;
+}
+
+
+/* =========================================================
+   ✨ MOVING SHINE
+   ========================================================= */
+
+@keyframes subjectShine {
+
+    0% {
+        left: -80%;
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    55% {
+        left: 125%;
+        opacity: 0.8;
+    }
+
+    100% {
+        left: 125%;
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   📱 MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .subject-card {
+        border-radius: 23px !important;
+
+        box-shadow:
+            0 10px 24px rgba(0, 0, 0, 0.28),
+            0 0 14px rgba(52, 130, 246, 0.42),
+            0 0 32px rgba(37, 99, 235, 0.22),
+            inset 0 2px 0 rgba(255, 255, 255, 0.28),
+            inset 0 -15px 22px rgba(0, 35, 110, 0.14) !important;
+    }
+
+    .subject-card .subject-icon {
+        font-size: 46px;
+    }
+}

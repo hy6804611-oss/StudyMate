@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>StudyMate Advanced Analytics</title>
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      href="style.css">
+
+<!-- PERSONAL CSS FOR ADVANCED ANALYTICS ONLY -->
+<link rel="stylesheet"
+      href="advancedanalytics.css">
+
+</head>
+
+<body>
+
+<div class="advanced-page">
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="advanced-header">
+
+
+
+        <div>
+
+            <span class="advanced-premium-badge">
+                👑 PREMIUM
+            </span>
+
+            <h1>
+                Advanced Analytics
+            </h1>
+
+            <p>
+                Your complete StudyMate learning
+                and CBT performance insights.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         OVERALL PERFORMANCE
+    ====================================== -->
+
+    <section class="advanced-section">
+
+        <h2>
+            📊 Overall Performance
+        </h2>
+
+        <div class="advanced-stat-grid">
+
+            <div class="advanced-stat-card">
+
+                <span class="advanced-stat-icon">
+                    📈
+                </span>
+
+                <div>
+
+                    <small>
+                        Learning Progress
+                    </small>
+
+                    <strong id="advancedOverallProgress">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="advanced-stat-card">
+
+                <span class="advanced-stat-icon">
+                    🎯
+                </span>
+
+                <div>
+
+                    <small>
+                        CBT Accuracy
+                    </small>
+
+                    <strong id="advancedCBTAccuracy">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="advanced-stat-card">
+
+                <span class="advanced-stat-icon">
+                    📝
+                </span>
+
+                <div>
+
+                    <small>
+                        CBT Questions
+                    </small>
+
+                    <strong id="advancedCBTQuestions">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="advanced-stat-card">
+
+                <span class="advanced-stat-icon">
+                    🔥
+                </span>
+
+                <div>
+
+                    <small>
+                        Study Streak
+                    </small>
+
+                    <strong id="advancedStudyStreak">
+                        0 days
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CBT PERFORMANCE
+    ====================================== -->
+
+    <section class="advanced-section">
+
+        <h2>
+            📝 CBT Performance
+        </h2>
+
+        <div class="advanced-cbt-card">
+
+            <div class="advanced-cbt-main">
+
+                <span>
+                    Overall CBT Score
+                </span>
+
+                <strong id="advancedCBTScore">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="advanced-progress-bar">
+
+                <div
+                    id="advancedCBTProgress">
+                </div>
+
+            </div>
+
+
+            <div class="advanced-cbt-stats">
+
+                <div>
+
+                    <small>
+                        Attempts
+                    </small>
+
+                    <strong id="advancedCBTAttempts">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        Correct
+                    </small>
+
+                    <strong id="advancedCBTCorrect">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        Wrong
+                    </small>
+
+                    <strong id="advancedCBTWrong">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         SUBJECT PERFORMANCE
+    ====================================== -->
+
+    <section class="advanced-section">
+
+        <h2>
+            📚 Subject Performance
+        </h2>
+
+        <div
+            id="advancedSubjectPerformance"
+            class="advanced-subject-grid">
+
+            <!-- JavaScript will generate subjects -->
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         STRONGEST / WEAKEST
+    ====================================== -->
+
+    <section class="advanced-section">
+
+        <h2>
+            🎯 Performance Insights
+        </h2>
+
+        <div class="advanced-insight-grid">
+
+            <div class="advanced-insight-card strongest">
+
+                <span>
+                    💪
+                </span>
+
+                <small>
+                    Strongest Subject
+                </small>
+
+                <strong id="advancedStrongestSubject">
+                    —
+                </strong>
+
+                <p>
+                    Based on your CBT performance.
+                </p>
+
+            </div>
+
+
+            <div class="advanced-insight-card weakest">
+
+                <span>
+                    ⚠️
+                </span>
+
+                <small>
+                    Needs Improvement
+                </small>
+
+                <strong id="advancedWeakestSubject">
+                    —
+                </strong>
+
+                <p>
+                    This subject needs more practice.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         LEARNING BREAKDOWN
+    ====================================== -->
+
+    <section class="advanced-section">
+
+        <h2>
+            🧠 Learning Breakdown
+        </h2>
+
+        <div class="advanced-breakdown-card">
+
+            <div class="advanced-breakdown-row">
+
+                <span>
+                    📖 Lesson Progress
+                </span>
+
+                <strong id="advancedLessonProgress">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="advanced-breakdown-row">
+
+                <span>
+                    📚 Flashcards Reviewed
+                </span>
+
+                <strong id="advancedFlashcards">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="advanced-breakdown-row">
+
+                <span>
+                    🏆 Subjects Completed
+                </span>
+
+                <strong id="advancedCompletedSubjects">
+                    0/14
+                </strong>
+
+            </div>
+
+
+            <div class="advanced-breakdown-row">
+
+                <span>
+                    📌 Subjects Remaining
+                </span>
+
+                <strong id="advancedRemainingSubjects">
+                    14
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         PERSONALIZED INSIGHTS
+    ====================================== -->
+
+    <section class="advanced-section">
+
+        <h2>
+            💡 Personalized Insights
+        </h2>
+
+        <div
+            id="advancedPersonalizedInsights"
+            class="advanced-insights-box">
+
+            <p>
+                Complete lessons and CBTs to receive
+                personalized insights.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         STUDY ACTIVITY
+    ====================================== -->
+
+    <section class="advanced-section">
+
+        <h2>
+            🕒 Detailed Study Activity
+        </h2>
+
+        <div
+            id="advancedActivity"
+            class="advanced-activity">
+
+            <div class="advanced-empty">
+
+                📚
+
+                <p>
+                    Your detailed activity will
+                    appear here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         RESET ANALYTICS
+    ====================================== -->
+
+    <button
+        type="button"
+        id="advancedAnalyticsReset"
+        class="advanced-reset-btn">
+
+        🗑️ Reset Analytics
+
+    </button>
+
+
+    <!-- =====================================
+         BACK TO ANALYTICS
+    ====================================== -->
+
+<button
+    type="button"
+    class="dashboard-bottom-btn"
+    onclick="location.href='dashboard.html'"
+>
+    ← Back to Dashboard
+</button>
+
+
+<!-- =====================================
+     ADVANCED ANALYTICS JAVASCRIPT
+====================================== -->
+
+<script src="study-streak.js"></script>
+
+<script src="analytics.js"></script>
+
+<script src="advancedanalytics.js"></script>
+
+
+</body>
+</html>
