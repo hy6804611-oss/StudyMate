@@ -55,7 +55,36 @@
 
     }
 
+    /*
+     * ==========================================
+     * STUDYMATE SPECIAL NAVIGATION
+     * ==========================================
+     */
 
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            const element =
+                event.target.closest("[data-nav]");
+
+            if (!element) return;
+
+            const nav =
+                element.getAttribute("data-nav");
+
+            if (nav === "cbt") {
+
+                event.preventDefault();
+                event.stopImmediatePropagation();
+
+                goTo("studymatecbt.html");
+
+            }
+
+        },
+        true
+    );
     /*
      * ==========================================
      * NORMAL LINKS
