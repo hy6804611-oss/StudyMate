@@ -2,94 +2,155 @@
 
     "use strict";
 
+    /*
+     * =====================================================
+     * STUDYMATE CENTRAL NAVIGATION
+     * =====================================================
+     *
+     * IMPORTANT:
+     * - Does NOT control Premium decisions.
+     * - Does NOT redirect CBT directly.
+     * - Does NOT redirect Premium features.
+     * - Uses normal history for ordinary internal pages.
+     * - Dashboard is treated as the main app boundary.
+     *
+     * GitHub Pages:
+     * /StudyMate/
+     * =====================================================
+     */
+
+
     const DASHBOARD = "dashboard.html";
-    const GET_STARTED = "index.html";
+
+
+    /* =====================================================
+       GET CURRENT FILE
+    ===================================================== */
+
+    function getFileName() {
+
+        return (
+            window.location.pathname
+                .split("/")
+                .pop()
+                .toLowerCase()
+        );
+
+    }
+
+
+    /* =====================================================
+       CHECK INTERNAL URL
+    ===================================================== */
 
     function isInternalPage(url) {
 
-        if (!url) return false;
+        if (!url) {
+            return false;
+        }
 
         return (
             !url.startsWith("http://") &&
             !url.startsWith("https://") &&
             !url.startsWith("mailto:") &&
             !url.startsWith("tel:") &&
-            !url.startsWith("#")
+            !url.startsWith("#") &&
+            !url.startsWith("javascript:")
         );
+
     }
 
 
-    function getFileName(url) {
+    /* =====================================================
+       PREMIUM ELEMENT CHECK
+    ===================================================== */
 
-        try {
+    function isPremiumElement(element) {
 
-            return new URL(
-                url,
-                window.location.href
-            ).pathname.split("/").pop();
-
-        } catch (error) {
-
-            return "";
-
+        if (!element) {
+            return false;
         }
 
+        return Boolean(
+            element.closest("[data-premium-feature]")
+        );
+
     }
 
 
-    function goTo(url) {
+    /* =====================================================
+       SPECIAL NAVIGATION CHECK
+    ===================================================== */
 
-        if (!url) return;
+    function isSpecialNavigation(element) {
+
+        if (!element) {
+            return false;
+        }
+
+        const nav =
+            element.getAttribute("data-nav");
+
+        /*
+         * CBT is deliberately excluded.
+         *
+         * Its own Premium controller must receive
+         * the click.
+         */
+
+        if (nav === "cbt") {
+            return true;
+        }
+
+        /*
+         * Premium elements are also excluded.
+         */
+
+        if (isPremiumElement(element)) {
+            return true;
+        }
+
+        return false;
+
+    }
+
+
+    /* =====================================================
+       NORMAL INTERNAL NAVIGATION
+    ===================================================== */
+
+    function navigateNormally(url) {
 
         if (!isInternalPage(url)) {
             return;
         }
 
         /*
-         * Every normal StudyMate navigation uses
-         * replace() so we don't create long chains
-         * of pages in browser history.
+         * IMPORTANT:
+         *
+         * Use normal navigation instead of replace().
+         *
+         * This creates predictable browser history:
+         *
+         * Dashboard
+         *    ↓
+         * Learn
+         *    ↓
+         * Mathematics
+         *
+         * Back:
+         *
+         * Mathematics → Learn → Dashboard
          */
 
-        window.location.replace(url);
+        window.location.href = url;
 
     }
 
-    /*
-     * ==========================================
-     * STUDYMATE SPECIAL NAVIGATION
-     * ==========================================
-     */
 
-    document.addEventListener(
-        "click",
-        function (event) {
-
-            const element =
-                event.target.closest("[data-nav]");
-
-            if (!element) return;
-
-            const nav =
-                element.getAttribute("data-nav");
-
-            if (nav === "cbt") {
-
-                event.preventDefault();
-                event.stopImmediatePropagation();
-
-                goTo("studymatecbt.html");
-
-            }
-
-        },
-        true
-    );
-    /*
-     * ==========================================
-     * NORMAL LINKS
-     * ==========================================
-     */
+    /* =====================================================
+       NORMAL LINK HANDLER
+    ===================================================== */
 
     document.addEventListener(
         "click",
@@ -98,7 +159,20 @@
             const link =
                 event.target.closest("a");
 
-            if (!link) return;
+            if (!link) {
+                return;
+            }
+
+            /*
+             * Let Premium and special navigation
+             * handlers work normally.
+             */
+
+            if (
+                isSpecialNavigation(link)
+            ) {
+                return;
+            }
 
             const href =
                 link.getAttribute("href");
@@ -112,21 +186,25 @@
                 return;
             }
 
-            event.preventDefault();
-            event.stopImmediatePropagation();
+            /*
+             * Do NOT use stopImmediatePropagation().
+             *
+             * Page-specific JavaScript must remain able
+             * to work.
+             */
 
-            goTo(href);
+            event.preventDefault();
+
+            navigateNormally(href);
 
         },
-        true
+        false
     );
 
 
-    /*
-     * ==========================================
-     * BUTTONS / DIVS WITH ONCLICK
-     * ==========================================
-     */
+    /* =====================================================
+       ONCLICK NAVIGATION
+    ===================================================== */
 
     document.addEventListener(
         "click",
@@ -135,74 +213,169 @@
             const element =
                 event.target.closest("[onclick]");
 
-            if (!element) return;
+            if (!element) {
+                return;
+            }
+
+            /*
+             * Never interfere with Premium elements.
+             */
+
+            if (
+                isSpecialNavigation(element)
+            ) {
+                return;
+            }
 
             const code =
                 element.getAttribute("onclick");
 
-            if (!code) return;
-
+            if (!code) {
+                return;
+            }
 
             const match =
                 code.match(
                     /(?:window\.)?location\.(?:href|replace)\s*(?:=\s*|\(\s*)['"]([^'"]+)['"]/i
                 );
 
+            if (!match) {
+                return;
+            }
 
-            if (!match) return;
-
-
-            const url = match[1];
+            const url =
+                match[1];
 
             if (!isInternalPage(url)) {
                 return;
             }
 
+            /*
+             * Stop the old inline location.replace()
+             * from executing.
+             *
+             * Then use normal history navigation.
+             */
 
             event.preventDefault();
-            event.stopImmediatePropagation();
 
-            goTo(url);
+            navigateNormally(url);
 
         },
         true
     );
 
 
-    /*
-     * ==========================================
-     * PHONE / BROWSER BACK BUTTON
-     * ==========================================
-     *
-     * If the user goes backward and lands on
-     * Get Started, immediately replace that old
-     * history entry with Dashboard.
-     *
-     * This prevents the user from returning to
-     * the Get Started page when leaving the app.
-     */
+    /* =====================================================
+       DASHBOARD BOUNDARY
+    ===================================================== */
+
+    function setupDashboardBoundary() {
+
+        const currentPage =
+            getFileName();
+
+        if (
+            currentPage !== DASHBOARD
+        ) {
+            return;
+        }
+
+        /*
+         * Mark the current Dashboard entry as the
+         * StudyMate application root.
+         *
+         * We do NOT redirect.
+         * We do NOT create a navigation loop.
+         */
+
+        history.replaceState(
+            {
+                studyMateDashboardRoot: true
+            },
+            "",
+            window.location.href
+        );
+
+    }
+
+
+    /* =====================================================
+       BACK EVENT
+    ===================================================== */
 
     window.addEventListener(
         "popstate",
         function () {
 
-            const currentPage =
-                getFileName(window.location.href);
+            /*
+             * Do not redirect old pages to Dashboard.
+             *
+             * Normal browser history should handle
+             * internal navigation.
+             *
+             * The native Android Dashboard Back action
+             * will be handled by Capacitor later.
+             */
 
-
-            if (
-                currentPage === GET_STARTED ||
-                currentPage === ""
-            ) {
-
-                window.location.replace(
-                    DASHBOARD
-                );
-
-            }
+            return;
 
         }
     );
 
+
+    /* =====================================================
+       INITIALIZE
+    ===================================================== */
+
+    if (
+        document.readyState === "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            setupDashboardBoundary
+        );
+
+    } else {
+
+        setupDashboardBoundary();
+
+    }
+/* =====================================================
+   DASHBOARD EXIT GUARD
+   Prevents Back button from leaving the app boundary
+===================================================== */
+
+if (getFileName() === DASHBOARD) {
+
+    // Push a guard entry so Back is "caught" here first
+    history.pushState({ studyMateExitGuard: true }, "", window.location.href);
+
+    window.addEventListener("popstate", function () {
+
+        const confirmExit = confirm("Exit StudyMate?");
+
+        if (confirmExit) {
+
+            // If wrapped in Capacitor, close the app natively
+            if (window.Capacitor && window.Capacitor.isNativePlatform()) {
+                import("@capacitor/app").then(({ App }) => App.exitApp());
+            }
+
+        } else {
+
+            // Stay on dashboard — re-arm the guard
+            history.pushState({ studyMateExitGuard: true }, "", window.location.href);
+
+        }
+
+    });
+
+}
+
+    console.log(
+        "StudyMate Navigation System loaded."
+    );
 
 })();
