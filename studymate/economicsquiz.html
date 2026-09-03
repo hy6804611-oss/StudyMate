@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudyMate - Economics Quiz</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="quiz-container">
+
+<h1> 📈 Economics Quiz</h1>
+
+<div id="timer">15:00</div>
+
+<div id="questionNumber">
+Question 1 of 20
+</div>
+
+<div id="progress"></div>
+
+<div id="question"></div>
+
+<div id="options"></div>
+
+<button id="nextBtn">
+Next Question
+</button>
+
+</div>
+<div id="resultContainer" class="quiz-container" style="display:none;">
+
+<h1>🎉 Quiz Completed!</h1>
+
+<h2>Score: <span id="score"></span> / <span id="totalQuestions"></span></h2>
+
+<h2>Percentage: <span id="percentage"></span></h2>
+
+<h2>Grade: <span id="grade"></span></h2>
+
+<p id="remark"></p>
+
+<button onclick="restartQuiz()">🔄 Try Again</button>
+
+<button onclick="window.location.href='economics.html'">⬅ Back to Economics </button>
+
+</div>
+
+<script src="economicsquiz.js"></script>
+
+<script src="navigation.js"></script>
+</body>
+
+</html>

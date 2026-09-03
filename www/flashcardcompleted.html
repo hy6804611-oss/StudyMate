@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flashcards Completed</title>
+
+<link rel="stylesheet" href="flashcardcompleted.css">
+
+</head>
+
+<body>
+
+<div class="completed-card">
+
+<div class="success-circle">
+100%
+</div>
+
+<h1>🎉 Flashcards Completed!</h1>
+
+<p class="completed-text">
+Congratulations! 🎊<br><br>
+
+You have successfully completed
+
+<b>200 / 200 Flashcards.</b>
+</p>
+
+<div class="stars">
+⭐⭐⭐⭐⭐
+</div>
+
+<div class="achievement">
+🏆 Flashcard Master
+</div>
+
+<div class="subject" id="subjectName"></div>
+
+<p class="ready-text">
+You're now ready to test yourself with the CBT Exam.
+</p>
+
+<button class="studyAgain" onclick="studyAgain()">
+📖 Study Again
+</button>
+
+<button class="favoriteBtn" onclick="goFavorites()">
+⭐ My Favorites
+</button>
+
+<button class="backSubject" onclick="backSubjects()">
+📚 Back to Subjects
+</button>
+
+<button class="premiumBtn" onclick="continueCBT()">
+🚀 Continue to CBT (Premium)
+</button>
+
+<div class="footer-text">
+Keep Learning • Keep Winning 💙
+<br><br>
+Powered by <b>StudyMate</b>
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("subjectName").innerHTML =
+localStorage.getItem("flashcardSubject") || "Subject";
+
+function studyAgain(){
+
+const subject =
+(localStorage.getItem("flashcardSubject") || "").toLowerCase();
+
+window.location.href = subject + "flashcards.html";
+
+}
+
+function backSubjects(){
+
+window.location.href = "flashcards.html";
+
+}
+
+function goFavorites(){
+
+window.location.href = "favorites.html";
+
+}
+
+function continueCBT(){
+
+alert(
+"🔒 Premium Feature\n\n" +
+"Continue to CBT Exam is available only for StudyMate Premium users.\n\n" +
+"Upgrade to StudyMate Premium to unlock unlimited CBT Exams."
+);
+
+}
+
+</script>
+<script src="navigation.js"></script>
+</body>
+</html>

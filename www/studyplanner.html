@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>StudyMate Study Planner</title>
+
+<link
+    rel="stylesheet"
+    href="studyplanner.css"
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+</head>
+
+
+<body>
+
+<div class="study-planner-page">
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="planner-header">
+
+        <div>
+
+            <p class="planner-welcome">
+                📅 StudyMate
+            </p>
+
+            <h1>
+                Study Planner
+            </h1>
+
+            <p>
+                Organize your study time and stay consistent.
+            </p>
+
+        </div>
+
+
+        <a
+            href="dashboard.html"
+            class="planner-profile"
+        >
+            👤
+        </a>
+
+    </header>
+
+
+
+    <!-- =====================================
+         TODAY
+    ====================================== -->
+
+    <section class="planner-today">
+
+        <div>
+
+            <span>
+                📆 Today
+            </span>
+
+            <h2 id="plannerToday">
+                Loading...
+            </h2>
+
+        </div>
+
+
+        <div class="planner-today-icon">
+            🎯
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         DAILY PROGRESS
+    ====================================== -->
+
+    <section class="planner-progress-card">
+
+        <div class="planner-progress-header">
+
+            <div>
+
+                <span>
+                    Today's Progress
+                </span>
+
+                <strong id="plannerProgressPercentage">
+                    0%
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="planner-progress-bar">
+
+            <div
+                id="plannerProgressFill"
+                class="planner-progress-fill"
+            ></div>
+
+        </div>
+
+
+        <p id="plannerProgressText">
+            No study tasks completed yet.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         ADD STUDY TASK
+    ====================================== -->
+
+    <section class="planner-card">
+
+        <div class="planner-section-title">
+
+            <span>
+                ➕
+            </span>
+
+            <h2>
+                Add Study Task
+            </h2>
+
+        </div>
+
+
+        <div class="planner-form">
+
+
+            <label for="taskTitle">
+                What do you want to study?
+            </label>
+
+            <input
+                type="text"
+                id="taskTitle"
+                placeholder="e.g. Mathematics — Algebra"
+            >
+
+
+            <label for="taskSubject">
+                Subject
+            </label>
+
+            <select id="taskSubject">
+
+                <option value="">
+                    Select subject
+                </option>
+
+                <option value="Mathematics">
+                    Mathematics
+                </option>
+
+                <option value="English">
+                    English
+                </option>
+
+                <option value="Physics">
+                    Physics
+                </option>
+
+                <option value="Chemistry">
+                    Chemistry
+                </option>
+
+                <option value="Biology">
+                    Biology
+                </option>
+
+                <option value="Geography">
+                    Geography
+                </option>
+
+                <option value="Computer">
+                    Computer
+                </option>
+
+                <option value="Government">
+                    Government
+                </option>
+
+                <option value="Economics">
+                    Economics
+                </option>
+
+                <option value="History">
+                    History
+                </option>
+
+                <option value="Literature">
+                    Literature
+                </option>
+
+                <option value="Civic Education">
+                    Civic Education
+                </option>
+
+                <option value="Commerce">
+                    Commerce
+                </option>
+
+                <option value="Principles of Accounts">
+                    Principles of Accounts
+                </option>
+
+            </select>
+
+
+            <label for="taskDate">
+                Study Date
+            </label>
+
+            <input
+                type="date"
+                id="taskDate"
+            >
+
+
+            <label for="taskTime">
+                Study Time
+            </label>
+
+            <input
+                type="time"
+                id="taskTime"
+            >
+<label for="taskDuration">
+    Study Duration
+</label>
+
+<select id="taskDuration">
+
+    <option value="15">
+        15 minutes
+    </option>
+
+    <option value="30" selected>
+        30 minutes
+    </option>
+
+    <option value="45">
+        45 minutes
+    </option>
+
+    <option value="60">
+        1 hour
+    </option>
+
+    <option value="90">
+        1 hour 30 minutes
+    </option>
+
+    <option value="120">
+        2 hours
+    </option>
+
+</select>
+
+            <button
+                type="button"
+                id="addStudyTaskBtn"
+            >
+                ➕ Add Study Task
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TODAY'S TASKS
+    ====================================== -->
+
+    <section class="planner-card">
+
+        <div class="planner-section-title">
+
+            <span>
+                📚
+            </span>
+
+            <h2>
+                Today's Study Plan
+            </h2>
+
+        </div>
+
+
+        <div
+            id="todayTasks"
+            class="planner-task-list"
+        >
+
+            <div class="planner-empty">
+
+                <span>
+                    📖
+                </span>
+
+                <p>
+                    No study tasks for today.
+                </p>
+
+                <small>
+                    Add your first study task above.
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         UPCOMING TASKS
+    ====================================== -->
+
+    <section class="planner-card">
+
+        <div class="planner-section-title">
+
+            <span>
+                🗓️
+            </span>
+
+            <h2>
+                Upcoming Study
+            </h2>
+
+        </div>
+
+
+        <div
+            id="upcomingTasks"
+            class="planner-task-list"
+        >
+
+            <div class="planner-empty">
+
+                <span>
+                    🗓️
+                </span>
+
+                <p>
+                    No upcoming study tasks.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         ADVANCED STUDY PLANNER
+    ====================================== -->
+
+    <section class="planner-premium-card">
+
+        <div class="premium-crown">
+            👑
+        </div>
+
+
+        <span class="planner-premium-badge">
+            PREMIUM
+        </span>
+
+
+        <h2>
+            Advanced Study Planner
+        </h2>
+
+
+        <p>
+            Get a smarter study plan based on your
+            subjects, progress, study habits and
+            areas that need more practice.
+        </p>
+
+
+        <div class="planner-premium-features">
+
+            <div>
+                🎯 Personalized Study Schedule
+            </div>
+
+            <div>
+                📊 Weak Subject Planning
+            </div>
+
+            <div>
+                🔥 Smart Study Streaks
+            </div>
+
+            <div>
+                📚 Weekly Study Plan
+            </div>
+
+            <div>
+                ⏰ Study Time Targets
+            </div>
+
+            <div>
+                📝 Exam Preparation Plan
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+    <!-- =====================================
+         BACK TO DASHBOARD
+    ====================================== -->
+
+    <button
+        type="button"
+        class="planner-back-btn"
+        onclick="location.href='dashboard.html'"
+    >
+        ← Back to Dashboard
+    </button>
+
+
+</div>
+
+
+<script src="study-streak.js"></script>
+<script src="studyplanner.js"></script>
+<script src="notifications.js"></script>
+<script src="navigation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>StudyMate Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="dashboard-v2.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body
+    class="dashboard-v2"
+    id="dashboardPage"
+>
+
+<div class="dashboard-wrapper">
+
+    <!-- HEADER -->
+
+    <header class="dashboard-header">
+
+        <div class="header-content">
+
+            <p
+                class="welcome-text"
+                id="dashboardWelcome"
+            >
+                👋 Welcome
+            </p>
+
+            <h1>
+                StudyMate
+            </h1>
+
+            <p class="subtitle">
+                Learn smarter. Achieve more.
+            </p>
+
+        </div>
+
+        <a
+            href="profile.html"
+            class="profile-icon"
+            id="profileIcon"
+            aria-label="Open Profile"
+        >
+
+            <span id="dashboardProfileAvatar">
+                👤
+            </span>
+
+        </a>
+
+    </header>
+
+
+    <!-- QUICK STATISTICS -->
+
+    <section
+        class="stats"
+        aria-label="Study Statistics"
+    >
+
+        <div class="stat-box">
+            <span class="stat-icon">🔥</span>
+
+            <h2 id="dayStreak">0</h2>
+
+            <p>Streak</p>
+        </div>
+
+        <div class="stat-box">
+            <span class="stat-icon">⭐</span>
+
+            <h2 id="userLevel">1</h2>
+
+            <p>Level</p>
+        </div>
+
+        <div class="stat-box">
+            <span class="stat-icon">🏆</span>
+
+            <h2 id="userBadges">0</h2>
+
+            <p>Badges</p>
+        </div>
+
+        <div class="stat-box">
+            <span class="stat-icon">📚</span>
+
+            <h2 id="overallProgress">0%</h2>
+
+            <p>Progress</p>
+        </div>
+
+    </section>
+
+
+    <!-- TODAY'S GOAL -->
+
+    <section class="study-overview">
+
+        <div class="goal-card dashboard-card">
+
+            <div class="card-icon">
+                🎯
+            </div>
+
+            <h2>
+                Today's Goal
+            </h2>
+
+            <p id="dailyGoalText">
+                Complete at least one lesson
+                and one quiz today.
+            </p>
+
+            <button
+                type="button"
+                id="startLearningBtn"
+            >
+                Start Learning
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- STUDY TOOLS -->
+
+    <section class="study-tools">
+
+        <!-- FLASHCARDS -->
+
+        <div class="tool-card dashboard-card">
+
+            <div class="card-icon">
+                🃏
+            </div>
+
+            <h2>
+                Flashcards
+            </h2>
+
+            <p>
+                Master every subject with
+                interactive flashcards.
+                Quick, fun and perfect for
+                daily revision.
+            </p>
+
+            <button
+                type="button"
+                id="flashcardsBtn"
+            >
+                Start Flashcards
+            </button>
+
+        </div>
+
+
+        <!-- FORMULA BOOK -->
+
+        <div
+            class="tool-card dashboard-card premium-tool-card"
+        >
+
+            <div class="premium-tool-glow"></div>
+
+            <div class="premium-tool-crown">
+                👑
+            </div>
+
+            <div class="card-icon">
+                📖
+            </div>
+
+            <span class="premium-tool-badge">
+                👑 PREMIUM
+            </span>
+
+            <h2>
+                Formula Book
+            </h2>
+
+            <p>
+                Access formulas, equations,
+                units and quick revision
+                notes for your subjects.
+            </p>
+
+            <button
+                type="button"
+                id="formulaBookBtn"
+            >
+                📘 Open Formula Book
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PREMIUM UPGRADE -->
+
+    <section
+        class="premium-dashboard-section"
+        id="premiumDashboardSection"
+    >
+
+        <div
+            class="premium-dashboard-card"
+            id="premiumUpgradeCard"
+            role="button"
+            tabindex="0"
+        >
+
+            <div class="premium-card-glow"></div>
+
+            <div class="premium-card-icon">
+                👑
+            </div>
+
+            <div class="premium-card-content">
+
+                <span class="premium-dashboard-badge">
+                    🔒 PREMIUM FEATURE
+                </span>
+
+                <h2>
+                    Upgrade to StudyMate Premium
+                </h2>
+
+                <p>
+                    Unlock advanced study tools,
+                    deeper analytics, CBT,
+                    Formula Book and unlimited
+                    favorites with one upgrade.
+                </p>
+
+                <span class="premium-dashboard-link">
+                    View Upgrade Plan →
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STUDY PLANNING -->
+
+    <section
+        class="study-planning-section"
+        id="studyPlanningSection"
+    >
+
+        <div class="dashboard-section-heading">
+
+            <div class="section-heading-icon">
+                📚
+            </div>
+
+            <div>
+
+                <h2>
+                    Study Planning
+                </h2>
+
+                <p>
+                    Organize your study time and
+                    stay on track.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- NORMAL PLANNER -->
+
+        <div
+            class="dashboard-planner-card study-planner-card"
+            id="studyPlannerCard"
+            role="button"
+            tabindex="0"
+            aria-label="Open Study Planner"
+        >
+
+            <div class="planner-card-icon">
+                📅
+            </div>
+
+            <div class="planner-card-content">
+
+                <h3>
+                    Study Planner
+                </h3>
+
+                <p>
+                    Plan your daily study sessions,
+                    organize your subjects and build
+                    a consistent study routine.
+                </p>
+
+                <span class="dashboard-planner-link">
+                    Open Study Planner →
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADVANCED PLANNER -->
+
+        <div
+            class="dashboard-planner-card advanced-planner-card"
+            id="advancedStudyPlannerCard"
+            data-premium-feature="planner"
+            role="button"
+            tabindex="0"
+            aria-label="Open Advanced Study Planner"
+        >
+
+            <div
+                class="advanced-premium-circle"
+                aria-label="Premium"
+            >
+                👑
+            </div>
+
+            <div class="planner-card-icon">
+                📚
+            </div>
+
+            <div class="planner-card-content">
+
+                <div class="advanced-title-row">
+
+                    <h3>
+                        Advanced Study Planner
+                    </h3>
+
+                </div>
+
+                <span class="premium-mini-badge">
+                    PREMIUM
+                </span>
+
+                <p>
+                    Create smarter study schedules
+                    based on your subjects, available
+                    time and examination dates.
+                </p>
+
+                <span class="dashboard-planner-link">
+                    Unlock Advanced Planner →
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANALYTICS -->
+
+    <section
+        class="dashboard-analytics-section"
+        id="dashboardAnalytics"
+    >
+
+        <div class="dashboard-analytics-heading">
+
+            <span>📊</span>
+
+            <h2>
+                Analytics
+            </h2>
+
+        </div>
+
+
+        <!-- NORMAL ANALYTICS -->
+
+        <div
+            class="dashboard-analytics-card analytics-card"
+            id="normalAnalyticsCard"
+            role="button"
+            tabindex="0"
+        >
+
+            <div class="analytics-card-icon">
+                📊
+            </div>
+
+            <div class="analytics-card-content">
+
+                <h3>
+                    Analytics
+                </h3>
+
+                <p>
+                    Track your learning progress,
+                    quiz performance and study activity.
+                </p>
+
+                <span class="dashboard-analytics-link">
+                    View Analytics →
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADVANCED ANALYTICS -->
+
+        <div
+            class="dashboard-analytics-card advanced-analytics-card"
+            id="advancedAnalyticsCard"
+            data-premium-feature="analytics"
+            role="button"
+            tabindex="0"
+            aria-label="Advanced Analytics"
+        >
+
+            <div
+                class="advanced-premium-circle"
+                aria-label="Premium"
+            >
+                👑
+            </div>
+
+            <div class="analytics-card-icon">
+                📈
+            </div>
+
+            <div class="analytics-card-content">
+
+                <div class="advanced-title-row">
+
+                    <h3>
+                        Advanced Analytics
+                    </h3>
+
+                </div>
+
+                <span class="premium-mini-badge">
+                    PREMIUM
+                </span>
+
+                <p>
+                    Get deeper performance insights,
+                    subject analysis, CBT accuracy,
+                    learning breakdowns and more.
+                </p>
+
+                <span class="dashboard-analytics-link">
+                    Unlock Advanced Analytics →
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUBJECTS -->
+
+    <section class="subjects-section">
+
+        <div class="section-heading">
+
+            <span>
+                📚
+            </span>
+
+            <h2
+                class="section-title"
+                id="subjectsTitle"
+            >
+                Subjects
+            </h2>
+
+        </div>
+
+        <div
+            class="subjects-grid"
+            id="subjectsGrid"
+        >
+
+            <div
+                class="subject-card"
+                data-page="mathematics.html"
+            >
+                <div class="subject-icon">📘</div>
+
+                <p>Mathematics</p>
+            </div>
+
+
+            <div
+                class="subject-card"
+                data-page="english.html"
+            >
+                <div class="subject-icon">📗</div>
+
+                <p>English</p>
+            </div>
+
+
+            <div
+                class="subject-card"
+                data-page="physics.html"
+            >
+                <div class="subject-icon">⚛️</div>
+
+                <p>Physics</p>
+            </div>
+
+
+            <div
+                class="subject-card"
+                data-page="chemistry.html"
+            >
+                <div class="subject-icon">🧪</div>
+
+                <p>Chemistry</p>
+            </div>
+
+
+            <div
+                class="subject-card"
+                data-page="biology.html"
+            >
+                <div class="subject-icon">🧬</div>
+
+                <p>Biology</p>
+            </div>
+
+
+            <div
+                class="subject-card"
+                data-page="geography.html"
+            >
+                <div class="subject-icon">🌍</div>
+
+                <p>Geography</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACHIEVEMENTS -->
+
+    <section
+        class="achievement-card dashboard-card"
+        id="achievementCard"
+    >
+
+        <div class="card-icon">
+            🏅
+        </div>
+
+        <h2 id="achievementTitle">
+            Achievements
+        </h2>
+
+    </section>
+
+
+    <!-- DAILY STUDY TIP -->
+
+    <div class="study-tip-card">
+
+        <div class="study-tip-icon">
+            💡
+        </div>
+
+        <h2>
+            Daily Study Tip
+        </h2>
+
+        <p id="dailyStudyTip"></p>
+
+    </div>
+
+
+    <!-- BOTTOM NAVIGATION -->
+
+    <nav
+        class="bottom-nav"
+        id="bottomNavigation"
+        aria-label="Main Navigation"
+    >
+
+        <a
+            href="dashboard.html"
+            class="active"
+            data-nav="home"
+        >
+            <span>🏠</span>
+            <small>Home</small>
+        </a>
+
+
+        <a
+            href="learn.html"
+            data-nav="learn"
+        >
+            <span>📚</span>
+            <small>Learn</small>
+        </a>
+
+
+        <a
+            href="#"
+            id="cbtNavigation"
+            data-nav="cbt"
+        >
+            <span>📝</span>
+            <small>CBT</small>
+        </a>
+
+
+        <a
+            href="profile.html"
+            data-nav="profile"
+        >
+            <span>👤</span>
+            <small>Profile</small>
+        </a>
+
+    </nav>
+
+</div>
+
+
+<!-- PREMIUM CONTROLLER -->
+
+<script src="premium-access.js"></script>
+
+
+<!-- STUDY STREAK -->
+
+<script src="study-streak.js"></script>
+
+
+<!-- ACHIEVEMENTS -->
+
+<script src="achievements.js"></script>
+
+
+<!-- DASHBOARD ENGINE -->
+
+<script
+    type="module"
+    src="dashboard.js"
+></script>
+
+
+<!-- =====================================================
+     CENTRAL DASHBOARD NAVIGATION
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        function go(page) {
+
+            if (!page) return;
+
+            location.href = page;
+
+        }
+
+
+        /* START LEARNING */
+
+        const startLearning =
+            document.getElementById(
+                "startLearningBtn"
+            );
+
+        if (startLearning) {
+
+            startLearning.addEventListener(
+                "click",
+                function () {
+
+                    go("learn.html");
+
+                }
+            );
+
+        }
+
+
+        /* FLASHCARDS */
+
+        const flashcards =
+            document.getElementById(
+                "flashcardsBtn"
+            );
+
+        if (flashcards) {
+
+            flashcards.addEventListener(
+                "click",
+                function () {
+
+                    go("flashcards.html");
+
+                }
+            );
+
+        }
+
+
+        /* SUBJECTS */
+
+        document
+            .querySelectorAll(
+                ".subject-card[data-page]"
+            )
+            .forEach(
+                function (card) {
+
+                    card.addEventListener(
+                        "click",
+                        function () {
+
+                            go(
+                                card.dataset.page
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+        /* LEARN NAVIGATION */
+
+        const learnNav =
+            document.querySelector(
+                '[data-nav="learn"]'
+            );
+
+        if (learnNav) {
+
+            learnNav.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    go("learn.html");
+
+                }
+            );
+
+        }
+
+
+        /* PROFILE */
+
+        const profileIcon =
+            document.getElementById(
+                "profileIcon"
+            );
+
+        if (profileIcon) {
+
+            profileIcon.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    go("profile.html");
+
+                }
+            );
+
+        }
+
+
+        /* FORMULA BOOK */
+
+        const formulaBook =
+            document.getElementById(
+                "formulaBookBtn"
+            );
+
+        if (formulaBook) {
+
+            formulaBook.addEventListener(
+                "click",
+                function () {
+
+                    go("formulabook.html");
+
+                }
+            );
+
+        }
+
+
+        /* NORMAL PLANNER */
+
+        const planner =
+            document.getElementById(
+                "studyPlannerCard"
+            );
+
+        if (planner) {
+
+            planner.addEventListener(
+                "click",
+                function () {
+
+                    go("studyplanner.html");
+
+                }
+            );
+
+            planner.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key === "Enter" ||
+                        event.key === " "
+                    ) {
+
+                        event.preventDefault();
+
+                        go("studyplanner.html");
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /* CBT */
+
+        const cbt =
+            document.getElementById(
+                "cbtNavigation"
+            );
+
+        if (cbt) {
+
+            cbt.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    go("cbt.html");
+
+                }
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+
+<!-- DAILY STUDY TIP -->
+
+<script src="dailytip.js"></script>
+<script src="navigation.js"></script>
+</body>
+</html>

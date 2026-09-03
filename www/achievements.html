@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>StudyMate Achievements</title>
+
+    <link
+        rel="stylesheet"
+        href="achievements.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+<div class="achievements-page">
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="achievements-hero">
+
+        <div class="achievements-hero-content">
+
+            <span class="hero-badge">
+                🏆 STUDYMATE
+            </span>
+
+            <h1>
+                Achievements
+            </h1>
+
+            <p>
+                Keep learning, build your streak,
+                and unlock new badges as you progress.
+            </p>
+
+        </div>
+
+        <div class="hero-icon">
+            🏆
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         CURRENT PROGRESS
+    ========================================== -->
+
+    <section class="achievement-progress-card">
+
+        <div class="progress-icon">
+            🔥
+        </div>
+
+        <div class="progress-content">
+
+            <span>
+                Current Study Streak
+            </span>
+
+            <strong id="achievementStreak">
+                0 days
+            </strong>
+
+            <p id="achievementProgressText">
+                Start studying to begin earning achievements.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ACHIEVEMENT INTRO
+    ========================================== -->
+
+    <section class="achievement-section">
+
+        <div class="section-heading">
+
+            <span>
+                🏅
+            </span>
+
+            <div>
+
+                <h2>
+                    Your Badges
+                </h2>
+
+                <p>
+                    Complete StudyMate milestones to unlock
+                    special achievement badges.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             BADGES
+             
+             IMPORTANT:
+             JavaScript generates the badges.
+        ====================================== -->
+
+        <div
+            class="achievement-grid"
+            id="achievementGrid"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         NEXT ACHIEVEMENT
+    ========================================== -->
+
+    <section class="next-achievement-card">
+
+        <div class="next-icon">
+            🎯
+        </div>
+
+        <div>
+
+            <span>
+                NEXT ACHIEVEMENT
+            </span>
+
+            <h2 id="nextAchievementName">
+                Study Learner
+            </h2>
+
+            <p id="nextAchievementText">
+                Keep studying to unlock your next badge.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BACK TO DASHBOARD
+    ========================================== -->
+
+    <button
+        type="button"
+        class="dashboard-bottom-btn"
+        onclick="location.href='dashboard.html'"
+    >
+        ← Back to Dashboard
+    </button>
+
+
+</div>
+
+
+
+<!-- =========================================
+     STUDY STREAK ENGINE
+========================================== -->
+
+<script src="study-streak.js"></script>
+
+
+
+<!-- =========================================
+     ACHIEVEMENT ENGINE
+========================================== -->
+
+<script src="achievements.js"></script>
+
+
+</body>
+
+</html>

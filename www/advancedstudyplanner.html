@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>StudyMate Advanced Study Planner</title>
+
+    <link
+        rel="stylesheet"
+        href="advancedstudyplanner.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+<div class="advanced-planner-page">
+
+
+<!-- =====================================
+     ADVANCED STUDY PLANNER HEADER
+====================================== -->
+
+<header class="advanced-hero-header">
+
+    <div class="advanced-hero-glow"></div>
+
+    <div class="advanced-hero-content">
+
+        <span class="advanced-premium-badge">
+            👑 PREMIUM
+        </span>
+
+        <h1>
+            Advanced Study Planner
+        </h1>
+
+        <p>
+            Your smarter, personalized study plan.
+        </p>
+
+    </div>
+
+    <div class="advanced-hero-icon">
+        👑
+    </div>
+
+</header>
+
+    <!-- =====================================
+         WELCOME
+    ====================================== -->
+
+    <section class="advanced-welcome-card">
+
+        <div class="welcome-icon">
+            🎯
+        </div>
+
+        <div>
+
+            <h2>
+                Plan your study your way
+            </h2>
+
+            <p>
+                Choose your subjects, add the topics
+                you want to study, select your available
+                time and let StudyMate organize everything.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         STUDY GOAL
+    ====================================== -->
+
+    <section class="advanced-card">
+
+        <div class="advanced-section-title">
+
+            <span>🎯</span>
+
+            <div>
+
+                <h2>
+                    Your Study Goal
+                </h2>
+
+                <p>
+                    What do you want your plan to help you achieve?
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <label for="advancedGoal">
+            Choose your goal
+        </label>
+
+        <select id="advancedGoal">
+
+            <option value="daily">
+                Build a consistent study routine
+            </option>
+
+            <option value="weak">
+                Improve subjects I find difficult
+            </option>
+
+            <option value="exam">
+                Prepare for an upcoming exam
+            </option>
+
+            <option value="balanced">
+                Keep all my selected subjects balanced
+            </option>
+
+            <option value="revision">
+                Focus mainly on revision
+            </option>
+
+        </select>
+
+    </section>
+
+
+
+<select id="advancedSubjectSelect">
+    <option value="">
+        Select a subject
+    </option>
+</select>
+
+<button
+    type="button"
+    id="addAdvancedSubjectBtn"
+    class="secondary-action-btn"
+>
+    + Add Subject
+</button>
+
+<div
+    id="selectedSubjects"
+    class="selected-subjects"
+></div>
+
+    <!-- =====================================
+         DAILY STUDY TIME
+    ====================================== -->
+
+    <section class="advanced-card">
+
+        <div class="advanced-section-title">
+
+            <span>⏰</span>
+
+            <div>
+
+                <h2>
+                    Daily Study Time
+                </h2>
+
+                <p>
+                    Tap the amount of time you can study each day.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="time-options"
+            id="timeOptions"
+        >
+
+            <button
+                type="button"
+                class="time-option"
+                data-minutes="30"
+            >
+                <strong>
+                    30
+                </strong>
+
+                <span>
+                    min
+                </span>
+            </button>
+
+
+            <button
+                type="button"
+                class="time-option active"
+                data-minutes="60"
+            >
+                <strong>
+                    1
+                </strong>
+
+                <span>
+                    hour
+                </span>
+            </button>
+
+
+            <button
+                type="button"
+                class="time-option"
+                data-minutes="90"
+            >
+                <strong>
+                    1.5
+                </strong>
+
+                <span>
+                    hours
+                </span>
+            </button>
+
+
+            <button
+                type="button"
+                class="time-option"
+                data-minutes="120"
+            >
+                <strong>
+                    2
+                </strong>
+
+                <span>
+                    hours
+                </span>
+            </button>
+
+        </div>
+
+
+        <div
+            id="selectedTimeMessage"
+            class="selected-time-message"
+        >
+            ⏱️ You selected
+            <strong>
+                1 hour
+            </strong>
+            per day.
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         EXAM PLANNING
+    ====================================== -->
+
+    <section class="advanced-card">
+
+        <div class="advanced-section-title">
+
+            <span>🎓</span>
+
+            <div>
+
+                <h2>
+                    Exam Planning
+                </h2>
+
+                <p>
+                    Optional: add an exam date so StudyMate
+                    can plan your revision around it.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <label for="examDate">
+            Exam date
+        </label>
+
+        <input
+            type="date"
+            id="examDate"
+        >
+
+
+        <div
+            class="exam-countdown"
+            id="examCountdown"
+        >
+
+            <span>
+                📅
+            </span>
+
+            <div>
+
+                <small>
+                    Exam countdown
+                </small>
+
+                <strong id="daysUntilExam">
+                    No exam date selected
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         SMART SUBJECT PRIORITY
+    ====================================== -->
+
+    <section class="advanced-card">
+
+        <div class="advanced-section-title">
+
+            <span>🧠</span>
+
+            <div>
+
+                <h2>
+                    Smart Subject Priority
+                </h2>
+
+                <p>
+                    StudyMate will use your selected subjects
+                    and learning performance to decide where
+                    more attention may be useful.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="subjectPriorityList"
+            class="subject-priority-list"
+        >
+
+            <div class="priority-empty">
+
+                📊
+
+                <p>
+                    Your priorities will appear after
+                    you create your study plan.
+                </p>
+
+                <small>
+                    StudyMate will analyze the subjects
+                    you selected.
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         SMART TIME ALLOCATION
+    ====================================== -->
+
+    <section class="advanced-card">
+
+        <div class="advanced-section-title">
+
+            <span>⚖️</span>
+
+            <div>
+
+                <h2>
+                    Smart Time Allocation
+                </h2>
+
+                <p>
+                    StudyMate will divide your selected
+                    daily time across your chosen subjects.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="allocationList"
+            class="allocation-list"
+        >
+
+            <div class="allocation-empty">
+
+                🧮
+
+                <p>
+                    Your time allocation will appear
+                    after you generate your plan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PLAN SUMMARY
+    ====================================== -->
+
+    <section class="advanced-summary-card">
+
+        <div class="summary-icon">
+            📅
+        </div>
+
+        <div>
+
+            <span>
+                Your selected study time
+            </span>
+
+            <strong id="recommendedTime">
+                1 hour
+            </strong>
+
+            <p id="planSummaryText">
+                Choose your subjects and topics,
+                then generate your personalized plan.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         SMART STUDY SESSION
+    ====================================== -->
+
+    <section class="advanced-card">
+
+        <div class="advanced-section-title">
+
+            <span>⏱️</span>
+
+            <div>
+
+                <h2>
+                    Smart Study Sessions
+                </h2>
+
+                <p>
+                    StudyMate can organize each topic into
+                    learning, practice and review sessions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="session-structure">
+
+            <div class="session-step">
+
+                <span>
+                    01
+                </span>
+
+                <div>
+
+                    <strong>
+                        📖 Learn
+                    </strong>
+
+                    <small>
+                        Understand the topic and review your lesson.
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="session-step">
+
+                <span>
+                    02
+                </span>
+
+                <div>
+
+                    <strong>
+                        ✏️ Practice
+                    </strong>
+
+                    <small>
+                        Practice questions related to the topic.
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="session-step">
+
+                <span>
+                    03
+                </span>
+
+                <div>
+
+                    <strong>
+                        🔁 Review
+                    </strong>
+
+                    <small>
+                        Review difficult areas and previous mistakes.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         REVISION & REVIEW
+    ====================================== -->
+
+    <section class="advanced-card">
+
+        <div class="advanced-section-title">
+
+            <span>🔁</span>
+
+            <div>
+
+                <h2>
+                    Revision & Review
+                </h2>
+
+                <p>
+                    StudyMate can bring important topics
+                    back into your plan for revision.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="revision-features">
+
+            <div>
+
+                <span>
+                    📚
+                </span>
+
+                <strong>
+                    Previous Topics
+                </strong>
+
+                <small>
+                    Revisit topics you studied before.
+                </small>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    ❌
+                </span>
+
+                <strong>
+                    Mistake Review
+                </strong>
+
+                <small>
+                    Give extra attention to areas you struggled with.
+                </small>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    🧠
+                </span>
+
+                <strong>
+                    Spaced Review
+                </strong>
+
+                <small>
+                    Bring topics back at useful intervals.
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         GENERATE PLAN
+    ====================================== -->
+
+    <section class="advanced-action-card">
+
+        <div class="action-icon">
+            ✨
+        </div>
+
+        <h2>
+            Create My Study Plan
+        </h2>
+
+        <p>
+            StudyMate will use the subjects, topics,
+            goal, available time and optional exam date
+            you selected.
+        </p>
+
+
+        <button
+            type="button"
+            id="generateAdvancedPlanBtn"
+        >
+            ✨ Generate My Study Plan
+        </button>
+
+    </section>
+
+
+
+    <!-- =====================================
+         GENERATED PLAN
+    ====================================== -->
+
+    <section
+        class="generated-plan-section"
+        id="generatedPlanSection"
+        hidden
+    >
+
+        <div class="advanced-section-heading">
+
+            <span>
+                📚
+            </span>
+
+            <div>
+
+                <h2>
+                    Your Personalized Plan
+                </h2>
+
+                <p>
+                    Your study sessions are ready.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="generatedPlan"
+            class="generated-plan"
+        >
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         WEEKLY STUDY OVERVIEW
+    ====================================== -->
+
+    <section class="advanced-card">
+
+        <div class="advanced-section-title">
+
+            <span>🗓️</span>
+
+            <div>
+
+                <h2>
+                    Weekly Study Overview
+                </h2>
+
+                <p>
+                    See how your selected study sessions
+                    are distributed across the week.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="weeklyPlan"
+            class="weekly-plan"
+        >
+
+            <div class="weekly-empty">
+
+                🗓️
+
+                <p>
+                    Your weekly overview will appear
+                    after you generate your plan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- =====================================
+         PERSONALIZED INSIGHTS
+    ====================================== -->
+
+    <section class="advanced-card">
+
+        <div class="advanced-section-title">
+
+            <span>💡</span>
+
+            <div>
+
+                <h2>
+                    Personalized Insights
+                </h2>
+
+                <p>
+                    StudyMate explains useful patterns
+                    it finds in your study plan.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="plannerInsights"
+            class="planner-insights"
+        >
+
+            <div class="insight-empty">
+
+                💡
+
+                <p>
+                    Your personalized insights will
+                    appear after your plan is generated.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PREMIUM NOTE
+    ====================================== -->
+
+    <section class="premium-note">
+
+        <span>
+            👑
+        </span>
+
+        <div>
+
+            <strong>
+                Premium Study Planning
+            </strong>
+
+            <p>
+                StudyMate combines your selected subjects,
+                topics, available time, goals, exam timeline,
+                revision needs and learning performance
+                to build a smarter study schedule.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         BACK BUTTON
+    ====================================== -->
+    <button
+    type="button"
+    class="dashboard-bottom-btn"
+    onclick="location.href='dashboard.html'"
+>
+    ← Back to Dashboard
+</button>
+
+</div>
+
+
+<script src="study-streak.js"></script>
+<script src="advancedstudyplanner.js"></script>
+<script src="notifications.js"></script>
+<script src="navigation.js"></script>
+</body>
+
+</html>

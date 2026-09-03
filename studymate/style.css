@@ -1,0 +1,1631 @@
+html,
+body{
+    overflow-x:hidden;
+}
+/* ==========================================
+   STUDYMATE PROFESSIONAL CSS
+   PART 1
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',Arial,sans-serif;
+  background:linear-gradient(180deg,#071B4A,#0D2C73,#07152E);
+    color:#333;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* ===========================
+   DASHBOARD
+=========================== */
+
+.dashboard-page{
+    background:#07152E;
+    color:#fff;
+    min-height:100vh;
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+h1{
+    font-size:42px;
+    color:#0B3D91;
+    text-align:center;
+    margin:20px 0;
+}
+
+h2{
+    font-size:30px;
+    color:#1E3A8A;
+    text-align:center;
+    margin:20px 0;
+}
+
+h3{
+    color:#2563EB;
+    margin-bottom:12px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.7;
+    margin:10px 0;
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+input{
+    width:100%;
+    max-width:400px;
+    padding:15px;
+    border:1px solid #D1D5DB;
+    border-radius:14px;
+    font-size:17px;
+    outline:none;
+    margin:10px auto;
+    display:block;
+}
+
+input:focus{
+    border-color:#2563EB;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+    width:100%;
+    max-width:400px;
+    display:block;
+    margin:12px auto;
+
+    padding:16px;
+
+    background:#2563EB;
+    color:#fff;
+
+    border:none;
+    border-radius:15px;
+
+    font-size:18px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:background .2s;
+}
+
+button:hover{
+    background:#1D4ED8;
+}
+
+button:active{
+    transform:none;
+}
+/* ==========================================
+   STUDYMATE CSS
+   PART 2
+========================================== */
+
+/* NAVBAR */
+
+.navbar{
+    background:#0B3D91;
+    color:#fff;
+    padding:18px;
+    border-radius:16px;
+    margin-bottom:25px;
+}
+
+.navbar h1{
+    color:#fff;
+    margin:0;
+    font-size:30px;
+}
+
+/* CONTAINERS */
+
+.container{
+    width:95%;
+    max-width:900px;
+    margin:25px auto;
+    background:#ffffff;
+padding:35px;
+border-radius:28px;
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    margin:20px auto;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    align-items:center;
+}
+
+.dashboard button{
+    max-width:380px;
+}
+
+/* LESSON PAGE */
+
+.lesson-page{
+    background:#07152E;
+    min-height:100vh;
+    padding:25px;
+}
+
+.lesson-box{
+    width:95%;
+    max-width:950px;
+    margin:25px auto;
+    background:#fff;
+    border-radius:22px;
+    padding:35px;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.lesson-page h1{
+    color:#0B3D91;
+}
+
+.lesson-page h2{
+    color:#2563EB;
+}
+
+.lesson-page h3{
+    color:#1D4ED8;
+}
+
+/* PROFILE */
+
+.profile-box,
+.ai-box,
+.quiz-box{
+    width:95%;
+    max-width:700px;
+    margin:25px auto;
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.footer{
+    text-align:center;
+    color:#666;
+    margin-top:40px;
+}
+/* ==========================================
+   STUDYMATE CSS
+   PART 3 - QUIZ
+========================================== */
+
+.quiz-container{
+    width:95%;
+    max-width:700px;
+    margin:25px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+#question{
+    font-size:34px;
+    font-weight:700;
+    text-align:center;
+    line-height:1.6;
+    margin:30px 0;
+}
+
+
+#questionNumber,
+#progress,
+#timer,
+#score{
+    text-align:center;
+    font-size:20px;
+    font-weight:600;
+    margin:12px 0;
+}
+
+/* QUIZ OPTIONS */
+
+.option-btn{
+    width:100%;
+    min-height:85px;
+    margin:14px 0;
+    padding:18px;
+    font-size:22px;
+    border-radius:18px;
+}
+
+.option-btn:hover{
+    background:#1D4ED8;
+}
+
+/* ANSWER COLORS */
+
+.option-btn.correct{
+    background:#16A34A !important;
+    color:#fff !important;
+}
+
+.option-btn.wrong{
+    background:#DC2626 !important;
+    color:#fff !important;
+}
+
+#nextBtn{
+    margin-top:20px;
+}
+
+/* RESULT */
+
+#resultContainer{
+    text-align:center;
+}
+
+#remark{
+    font-size:20px;
+    font-weight:600;
+    margin-top:15px;
+}
+
+/* MATH BOXES */
+
+.formula-box,
+.example-box,
+.tip-box,
+.note-box,
+.warning-box,
+.question-box,
+.answer-box,
+.calculation-box{
+    margin:20px 0;
+    padding:16px;
+    border-radius:12px;
+}
+
+.formula-box{background:#EEF5FF;border-left:5px solid #1E3A8A;}
+.example-box{background:#F8FFF3;border-left:5px solid #28A745;}
+.tip-box{background:#FFF8E6;border-left:5px solid #FFC107;}
+.note-box{background:#EAF7FF;border-left:5px solid #17A2B8;}
+.warning-box{background:#FFF1F1;border-left:5px solid #DC3545;}
+.question-box{background:#F4F4FF;border-left:5px solid #6F42C1;}
+.answer-box{background:#F0FFF5;border-left:5px solid #20C997;}
+
+.calculation-box{
+    background:#FAFAFA;
+    border:2px dashed #999;
+    font-family:monospace;
+    overflow-x:auto;
+}
+
+.math-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+.math-table th{
+    background:#1E3A8A;
+    color:#fff;
+    padding:12px;
+}
+
+.math-table td{
+    padding:12px;
+    border:1px solid #DDD;
+    text-align:center;
+}
+
+.math-table tr:nth-child(even){
+    background:#F8F9FC;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    h1{font-size:30px;}
+
+    h2{font-size:24px;}
+
+    #question{
+        font-size:22px;
+    }
+
+    .option-btn{
+        font-size:17px;
+        padding:16px;
+    }
+
+    .container,
+    .lesson-box,
+    .quiz-container{
+        padding:20px;
+    }
+
+    .math-table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+}
+/* ===================================
+   PREMIUM LEARN PAGE
+=================================== */
+
+.subjects-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:30px;
+}
+
+.subject-card{
+    background:linear-gradient(135deg,#0B3D91,#2563EB);
+    border-radius:22px;
+    padding:28px 15px;
+    text-align:center;
+    cursor:pointer;
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+    border:2px solid rgba(255,255,255,.12);
+    transition:.25s;
+}
+
+.subject-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(37,99,235,.35);
+}
+
+.subject-icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.subject-title{
+    color:#FFFFFF;
+    font-size:19px;
+    font-weight:700;
+    line-height:1.3;
+}
+
+.back-btn{
+    width:100%;
+    margin-top:35px;
+    min-height:70px;
+    font-size:22px;
+    border-radius:18px;
+}
+
+@media(max-width:768px){
+
+    .subjects-grid{
+        gap:15px;
+    }
+
+    .subject-card{
+        padding:22px 10px;
+    }
+
+  .subject-icon{
+    font-size:48px;
+    margin-bottom:18px;
+}
+
+    .subject-title{
+        font-size:17px;
+    }
+
+}
+/* ===================================
+   PREMIUM LESSON PAGE
+=================================== */
+
+.lesson-page{
+    background:#07152E;
+    min-height:100vh;
+    padding:25px;
+}
+
+.lesson-page .lesson-box{
+    background:#FFFFFF;
+    width:95%;
+    max-width:950px;
+    margin:30px auto;
+    padding:35px;
+    border-radius:24px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.lesson-page h1{
+    color:#0B3D91;
+}
+
+.lesson-page h2{
+    color:#2563EB;
+}
+
+.lesson-page h3{
+    color:#1D4ED8;
+}
+/* ===== PREMIUM QUIZ HEADER ===== */
+
+.quiz-header{
+    margin-bottom:25px;
+}
+
+.quiz-top{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    margin:20px 0;
+}
+
+#timer,
+#questionNumber{
+    flex:1;
+    background:#0B3D91;
+    color:#fff;
+    padding:14px;
+    border-radius:14px;
+    text-align:center;
+    font-size:18px;
+    font-weight:700;
+}
+
+#progress{
+    background:#EAF2FF;
+    color:#0B3D91;
+    padding:12px;
+    border-radius:14px;
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+/* ===========================
+   INDEX PAGE
+=========================== */
+
+.hero-title{
+    font-size:60px;
+    color:#ffffff;
+    font-weight:800;
+    letter-spacing:1px;
+    margin-bottom:15px;
+}
+/* ===========================
+   INDEX TEXT
+=========================== */
+
+.hero-title{
+    color:#ffffff;
+    font-size:64px;
+    font-weight:800;
+    text-align:center;
+    margin-top:15px;
+    margin-bottom:10px;
+    letter-spacing:-2px;
+}
+
+.hero-subtitle{
+    color:#ffffff;
+    font-size:32px;
+    font-weight:700;
+    text-align:center;
+    margin:20px 0;
+}
+
+.hero-text{
+    color:#d6e4ff;
+    font-size:21px;
+    line-height:1.8;
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 35px;
+}
+
+.hero-footer{
+    color:#b8cfff;
+    font-size:20px;
+    font-weight:600;
+    text-align:center;
+    margin-top:35px;
+}
+/* ===========================
+LOGIN PAGE
+=========================== */
+
+.login-title{
+color:#ffffff;
+font-size:52px;
+font-weight:800;
+text-align:center;
+text-shadow:0 4px 15px rgba(0,0,0,.3);
+}
+
+.login-heading{
+color:#8cc8ff;
+font-size:34px;
+font-weight:700;
+text-align:center;
+margin-top:10px;
+}
+
+.login-text{
+color:#d7e8ff;
+font-size:19px;
+text-align:center;
+line-height:1.7;
+margin:20px 0 35px;
+}
+
+.login-btn,
+.signup-btn,
+.home-btn{
+box-shadow:0 10px 25px rgba(0,90,255,.35);
+}
+/* ===========================
+LEARN PAGE TITLE
+=========================== */
+
+.learn-title{
+    color:#ffffff;
+    font-size:50px;
+    font-weight:800;
+    text-align:center;
+    text-shadow:0 5px 18px rgba(0,0,0,.35);
+}
+
+.learn-subtitle{
+    color:#8ec5ff;
+    font-size:28px;
+    font-weight:600;
+    text-align:center;
+    margin-bottom:35px;
+}
+/* ===========================
+PROFILE PAGE
+=========================== */
+
+.profile-page{
+    background:linear-gradient(180deg,#0b1d57,#07153b);
+    min-height:100vh;
+}
+
+.profile-container{
+    max-width:500px;
+    margin:auto;
+    padding:35px 20px;
+    text-align:center;
+}
+
+.profile-avatar{
+    width:110px;
+    height:110px;
+    margin:auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:52px;
+    color:#fff;
+    box-shadow:0 0 30px rgba(59,130,246,.55);
+}
+
+.profile-title{
+    color:#fff;
+    font-size:40px;
+    margin-top:20px;
+    font-weight:800;
+}
+
+.profile-subtitle{
+    color:#9fd0ff;
+    margin:10px 0 30px;
+    font-size:18px;
+}
+
+.profile-card{
+    background:#17366f;
+    border-radius:22px;
+    padding:25px;
+    text-align:left;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.profile-card p{
+    color:#8ec5ff;
+    font-size:15px;
+    margin-top:15px;
+}
+
+.profile-card h3{
+    color:#fff;
+    margin-top:6px;
+    font-size:22px;
+}
+
+.profile-card hr{
+    border:none;
+    border-top:1px solid rgba(255,255,255,.12);
+    margin:18px 0;
+}
+
+.logout-btn{
+    width:100%;
+    margin-top:25px;
+    background:#dc2626;
+}
+
+.logout-btn:hover{
+    background:#b91c1c;
+}
+
+.back-btn{
+    width:100%;
+    margin-top:15px;
+}
+table {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    word-break: break-word;
+}
+.lesson-diagram{
+    width:100%;
+    max-width:500px;
+    height:auto;
+    display:block;
+    margin:15px auto;
+}
+
+.diagram-box{
+    text-align:center;
+    margin:20px 0;
+}
+.premium-card{
+    position:relative;
+    overflow:hidden;
+}
+
+/* ================= FORMULA BOOK ================= */
+
+.formula-container{
+    max-width:900px;
+    margin:25px auto;
+    padding:30px;
+    background:#ffffff;
+    border-radius:30px;
+    box-shadow:0 12px 30px rgba(0,0,0,.10);
+}
+
+.formula-subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:20px;
+}
+
+.formula-search{
+    width:100%;
+    padding:16px 20px;
+    border:none;
+    border-radius:18px;
+    background:#f8fafc;
+    font-size:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    margin-bottom:30px;
+    outline:none;
+}
+
+.formula-search:focus{
+    border:2px solid #2563eb;
+}
+
+
+.formula-topic{
+    background:#2563eb;
+    color:white;
+    padding:12px 18px;
+    border-radius:12px;
+    margin:30px 0 15px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.formula-card{
+    background:#ffffff;
+    border-radius:24px;
+    padding:22px;
+    margin:20px 0;
+    border-left:8px solid #2563eb;
+    box-shadow:0 8px 22px rgba(0,0,0,.10);
+    transition:all .3s ease;
+}
+
+.formula-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 30px rgba(37,99,235,.20);
+}
+
+.formula-card h3{
+    color:#2563eb;
+    margin-bottom:12px;
+}
+
+.formula-box{
+    background:#eef4ff;
+    border-left:6px solid #1d4ed8;
+    border-radius:18px;
+    padding:18px;
+    margin:18px 0;
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    color:#111827;
+    box-shadow:0 4px 12px rgba(37,99,235,.15);
+}
+
+.formula-card p{
+    line-height:1.8;
+    margin:8px 0;
+    color:#444;
+}
+.formula-page{
+    background:#f5f7fb;
+    min-height:100vh;
+}
+/* ==========================
+   PHYSICS FORMULA BOOK
+========================== */
+
+.physics-formula h1{
+    color:#7c3aed;
+}
+
+.physics-formula .formula-topic{
+    background:#7c3aed;
+    color:#fff;
+}
+
+.physics-formula .formula-card{
+    border-left:8px solid #7c3aed;
+}
+
+.physics-formula .formula-card h3{
+    color:#7c3aed;
+}
+
+.physics-formula .formula-box{
+    background:#f3e8ff;
+    border-left:6px solid #7c3aed;
+}
+
+.physics-formula .formula-search:focus{
+    border:2px solid #7c3aed;
+}
+
+.physics-formula .back-btn{
+    background:#7c3aed;
+}
+
+.physics-formula .back-btn:hover{
+    background:#6d28d9;
+}
+/* ==========================
+   CHEMISTRY FORMULA BOOK
+========================== */
+
+.chemistry-formula h1{
+    color:#16a34a;
+}
+
+.chemistry-formula .formula-topic{
+    background:#16a34a;
+    color:#fff;
+}
+
+.chemistry-formula .formula-card{
+    border-left:8px solid #16a34a;
+}
+
+.chemistry-formula .formula-card h3{
+    color:#16a34a;
+}
+
+.chemistry-formula .formula-box{
+    background:#dcfce7;
+    border-left:6px solid #16a34a;
+}
+
+.chemistry-formula .formula-search:focus{
+    border:2px solid #16a34a;
+}
+
+.chemistry-formula .back-btn{
+    background:#16a34a;
+}
+
+.chemistry-formula .back-btn:hover{
+    background:#15803d;
+}
+/* ==========================
+   GEOGRAPHY FORMULA BOOK
+   ORANGE THEME
+========================== */
+
+.geography-formula h1{
+    color:#f97316;
+}
+
+.geography-formula .formula-topic{
+    background:#f97316;
+    color:#fff;
+}
+
+.geography-formula .formula-card{
+    border-left:8px solid #f97316;
+}
+
+.geography-formula .formula-card h3{
+    color:#f97316;
+}
+
+.geography-formula .formula-box{
+    background:#ffedd5;
+    border-left:6px solid #f97316;
+}
+
+.geography-formula .formula-search:focus{
+    border:2px solid #f97316;
+}
+
+.geography-formula .back-btn{
+    background:#f97316;
+}
+
+.geography-formula .back-btn:hover{
+    background:#ea580c;
+}
+
+
+/* ==========================
+   COMPUTER STUDIES FORMULA BOOK
+   DARK GRAY THEME
+========================== */
+
+.computer-formula h1{
+    color:#374151;
+}
+
+.computer-formula .formula-topic{
+    background:#374151;
+    color:#fff;
+}
+
+.computer-formula .formula-card{
+    border-left:8px solid #374151;
+}
+
+.computer-formula .formula-card h3{
+    color:#374151;
+}
+
+.computer-formula .formula-box{
+    background:#f3f4f6;
+    border-left:6px solid #374151;
+}
+
+.computer-formula .formula-search:focus{
+    border:2px solid #374151;
+}
+
+.computer-formula .back-btn{
+    background:#374151;
+}
+
+.computer-formula .back-btn:hover{
+    background:#1f2937;
+}
+
+
+/* ==========================
+   ENGLISH FORMULA BOOK
+   RED THEME
+========================== */
+
+.english-formula h1{
+    color:#dc2626;
+}
+
+.english-formula .formula-topic{
+    background:#dc2626;
+    color:#fff;
+}
+
+.english-formula .formula-card{
+    border-left:8px solid #dc2626;
+}
+
+.english-formula .formula-card h3{
+    color:#dc2626;
+}
+
+.english-formula .formula-box{
+    background:#fee2e2;
+    border-left:6px solid #dc2626;
+}
+
+.english-formula .formula-search:focus{
+    border:2px solid #dc2626;
+}
+
+.english-formula .back-btn{
+    background:#dc2626;
+}
+
+.english-formula .back-btn:hover{
+    background:#b91c1c;
+}
+/* ===========================
+   SPLASH SCREEN
+=========================== */
+
+.splash-page{
+    background:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    color:white;
+    font-family:Poppins,sans-serif;
+}
+
+.splash-container{
+    text-align:center;
+}
+
+.logo-circle{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:white;
+    color:#2563eb;
+    font-size:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.splash-container h1{
+    margin-top:25px;
+    font-size:42px;
+}
+
+.splash-container p{
+    margin-top:10px;
+    font-size:18px;
+    opacity:.95;
+}
+
+.loader{
+    margin:35px auto 0;
+    width:55px;
+    height:55px;
+    border:6px solid rgba(255,255,255,.3);
+    border-top:6px solid white;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+/* ===========================
+   LESSON PAGE IMPROVEMENT - STEP 1
+=========================== */
+
+.lesson-page h1{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:#ffffff;
+    padding:16px 22px;
+    border-radius:16px;
+    margin:35px 0 20px;
+    font-size:30px;
+    box-shadow:0 8px 20px rgba(37,99,235,.25);
+}
+/* ===========================
+   LESSON PAGE IMPROVEMENT - STEP 2
+=========================== */
+
+.lesson-page h2{
+    background:#f8fbff;
+    color:#2563eb;
+    border-left:6px solid #16a34a;
+    padding:12px 18px;
+    border-radius:12px;
+    margin:28px 0 15px;
+    font-size:24px;
+    font-weight:700;
+}
+/* ===========================
+   LESSON PAGE IMPROVEMENT - STEP 3
+=========================== */
+
+.lesson-page p b{
+    color:#1565c0;
+    font-size:18px;
+    font-weight:700;
+}
+
+.lesson-page p{
+    line-height:2;
+    color:#444;
+    font-size:17px;
+    margin:12px 0;
+}
+
+.lesson-page hr{
+    border:none;
+    height:2px;
+    background:#dbeafe;
+    margin:35px 0;
+}
+/* ===========================
+   HOME PAGE PREMIUM
+=========================== */
+
+.hero-badges{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+margin:25px 0;
+}
+
+.badge{
+background:#ffffff20;
+color:#fff;
+padding:10px 18px;
+border-radius:50px;
+font-size:15px;
+font-weight:600;
+border:1px solid rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+transition:.3s;
+}
+
+.badge:hover{
+background:#ffffff35;
+transform:translateY(-3px);
+}
+
+.start-btn{
+width:100%;
+padding:18px;
+margin-top:30px;
+font-size:22px;
+font-weight:700;
+border:none;
+border-radius:18px;
+background:linear-gradient(135deg,#3B82F6,#2563EB);
+color:#fff;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(37,99,235,.35);
+transition:.3s;
+}
+
+.start-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 35px rgba(37,99,235,.45);
+}
+
+.hero-footer{
+margin-top:35px;
+font-size:16px;
+font-weight:600;
+color:#cbd5e1;
+letter-spacing:1px;
+text-align:center;
+}
+.start-btn{
+    margin-top:40px;
+    margin-bottom:40px;
+}
+/* ==========================================
+   PREMIUM SPLASH SCREEN
+========================================== */
+
+.splash-page{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#07152E,#123B8A,#2563EB);
+    font-family:'Poppins',sans-serif;
+}
+
+.splash-container{
+    text-align:center;
+    color:#fff;
+    animation:fadeUp 1s ease;
+    position:relative;
+}
+
+.glow-circle{
+    position:absolute;
+    width:220px;
+    height:220px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+    left:50%;
+    top:40px;
+    transform:translateX(-50%);
+    filter:blur(20px);
+    animation:pulse 2s infinite;
+}
+
+.splash-icon{
+    font-size:90px;
+    position:relative;
+    z-index:2;
+    animation:float 2.5s ease-in-out infinite;
+}
+
+.splash-title{
+    margin-top:15px;
+    font-size:46px;
+    font-weight:700;
+    letter-spacing:2px;
+    color:#ffffff;
+}
+
+.splash-version{
+    color:#FFD54F;
+    font-size:15px;
+    margin-top:5px;
+    font-weight:600;
+}
+
+.splash-loading{
+    margin-top:20px;
+    color:#E5E7EB;
+    font-size:17px;
+}
+
+.loader{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin-top:18px;
+}
+
+.loader div{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#FFD54F;
+    animation:bounce 1s infinite;
+}
+
+.loader div:nth-child(2){
+    animation-delay:.2s;
+}
+
+.loader div:nth-child(3){
+    animation-delay:.4s;
+}
+
+.premium-text{
+    margin-top:28px;
+    color:#FFD54F;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.copyright{
+    margin-top:55px;
+    font-size:13px;
+    color:#D1D5DB;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+@keyframes bounce{
+    0%,80%,100%{
+        transform:scale(.6);
+        opacity:.5;
+    }
+    40%{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes pulse{
+    0%{
+        transform:translateX(-50%) scale(1);
+    }
+    50%{
+        transform:translateX(-50%) scale(1.15);
+    }
+    100%{
+        transform:translateX(-50%) scale(1);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* STRONG HOME PAGE TEXT */
+
+.hero-title{
+    font-size:48px;
+    font-weight:900;
+    letter-spacing:-1px;
+}
+
+.hero-subtitle{
+    font-size:25px;
+    font-weight:800;
+    letter-spacing:-0.3px;
+}
+
+.hero-text{
+    font-size:17px;
+    font-weight:600;
+    line-height:1.7;
+}
+/* =========================================================
+   STUDYMATE COUNTRY SELECT
+========================================================= */
+
+#countrySelect {
+    width: 100%;
+    min-height: 58px;
+
+    margin-top: 14px;
+    padding: 0 18px;
+
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+
+    background: #2865e8;
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    outline: none;
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background-image:
+        linear-gradient(45deg, transparent 50%, #ffffff 50%),
+        linear-gradient(135deg, #ffffff 50%, transparent 50%);
+
+    background-position:
+        calc(100% - 22px) 25px,
+        calc(100% - 15px) 25px;
+
+    background-size:
+        7px 7px,
+        7px 7px;
+
+    background-repeat: no-repeat;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* When the student taps it */
+
+#countrySelect:focus {
+    border-color: rgba(255, 255, 255, 0.4);
+
+    box-shadow:
+        0 0 0 4px rgba(52, 152, 219, 0.2);
+
+    background-color: #3473f0;
+}
+
+
+/* When the student touches it */
+
+#countrySelect:active {
+    transform: scale(0.99);
+}
+
+
+/* Country options */
+
+#countrySelect option {
+    background: #173b78;
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* =====================================================
+   FORMULA BOOK — PREMIUM BADGE
+   TOP RIGHT — NO OVERLAP
+===================================================== */
+
+body {
+    position: relative;
+    padding-top: 90px;
+}
+
+
+/* PREMIUM BADGE */
+
+.formula-premium-badge {
+
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 145px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8b0,
+            #ffd700 45%,
+            #f3ad00 100%
+        );
+
+    border:
+        2px solid
+        rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 0 10px rgba(255,215,0,0.95),
+        0 0 25px rgba(255,190,0,0.7),
+        0 0 45px rgba(255,200,0,0.35),
+        inset 0 2px 5px rgba(255,255,255,0.9);
+
+    z-index: 999;
+
+    overflow: hidden;
+}
+
+
+/* CROWN */
+
+.premium-crown {
+
+    font-size: 17px;
+
+    color: #8a5700;
+
+    filter:
+        drop-shadow(
+            0 0 4px
+            rgba(255,255,255,0.8)
+        );
+
+    animation:
+        premiumCrownGlow 1.8s ease-in-out infinite;
+}
+
+
+/* PREMIUM WORD */
+
+.premium-text {
+
+    color: #3a2400 !important;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 1px 1px
+        rgba(255,255,255,0.5);
+}
+
+
+/* SPARKLE */
+
+.premium-sparkle {
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 12px #fff4a3,
+        0 0 20px #ffffff;
+
+    animation:
+        premiumSparkle 1.4s ease-in-out infinite;
+}
+
+
+/* MOVING GOLD SHINE */
+
+.formula-premium-badge::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: -40%;
+    left: -100%;
+
+    width: 45%;
+    height: 180%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.95),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    animation:
+        premiumShine 3s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+/* CROWN ANIMATION */
+
+@keyframes premiumCrownGlow {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* SPARKLE ANIMATION */
+
+@keyframes premiumSparkle {
+
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+
+/* SHINE ANIMATION */
+
+@keyframes premiumShine {
+
+    0% {
+        left: -100%;
+    }
+
+    45%, 100% {
+        left: 140%;
+    }
+}
+
+
+/* =====================================================
+   PHONE
+===================================================== */
+
+@media (max-width: 520px) {
+
+    body {
+        padding-top: 82px;
+    }
+
+    .formula-premium-badge {
+
+        top: 14px;
+        right: 12px;
+
+        width: 138px;
+        height: 48px;
+
+        gap: 6px;
+    }
+
+    .premium-crown {
+        font-size: 16px;
+    }
+
+    .premium-text {
+        font-size: 10px;
+    }
+
+    .premium-sparkle {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudyMate CBT Exam</title>
+
+<link rel="stylesheet" href="cbtexam.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 StudyMate CBT Exam</h1>
+
+    <!-- PROGRESS -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- TIMER -->
+    <div id="timer">
+        ⏱ 00:00
+    </div>
+
+
+    <!-- ==============================
+         SELECTED SUBJECT TABS
+         Subjects will be created by
+         cbtexam.js in selection order.
+    =============================== -->
+
+    <div class="subject-tabs" id="subjectTabs">
+    </div>
+
+
+    <!-- ==============================
+         CURRENT SUBJECT
+         Filled automatically by
+         cbtexam.js
+    =============================== -->
+
+    <div class="current-subject" id="currentSubject">
+    </div>
+
+
+    <!-- QUESTION NUMBER -->
+
+    <div id="questionNumber">
+        Question 1 of 60
+    </div>
+
+
+    <!-- QUESTION -->
+
+    <div id="question">
+        Question will appear here...
+    </div>
+
+
+    <!-- OPTIONS -->
+
+    <div class="options">
+
+        <div class="option">
+            A. Option A
+        </div>
+
+        <div class="option">
+            B. Option B
+        </div>
+
+        <div class="option">
+            C. Option C
+        </div>
+
+        <div class="option">
+            D. Option D
+        </div>
+
+    </div>
+
+
+    <!-- PREVIOUS / NEXT -->
+
+    <div class="buttons">
+
+        <button id="previousBtn">
+            ⬅ Previous
+        </button>
+
+        <button id="nextBtn">
+            Next ➡
+        </button>
+
+    </div>
+
+
+    <!-- QUESTION PALETTE -->
+
+    <div
+        id="questionPalette"
+        class="question-palette">
+    </div>
+
+
+    <!-- SUBMIT -->
+
+    <button id="submitBtn">
+        ✅ Submit Exam
+    </button>
+
+</div>
+
+
+<!-- QUESTION BANK -->
+<script src="cbtquestions.js"></script>
+
+<!-- CBT ENGINE -->
+<script src="cbtexam.js"></script>
+
+</body>
+
+</html>

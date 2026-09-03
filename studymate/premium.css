@@ -1,0 +1,1351 @@
+/* =========================================================
+   STUDYMATE PREMIUM
+   CLEAN WHITE + BLUE PREMIUM DESIGN
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #1268d9;
+    --blue-dark: #0b4fa8;
+    --blue-light: #eaf3ff;
+    --blue-soft: #f4f8ff;
+
+    --text: #14213d;
+    --muted: #718096;
+
+    --white: #ffffff;
+    --background: #f5f9ff;
+
+    --border: #dce8f7;
+
+    --green: #15966b;
+
+    --shadow:
+        0 10px 30px rgba(25, 88, 160, 0.10);
+
+    --radius: 22px;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+body {
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    background:
+        var(--background);
+
+    color:
+        var(--text);
+
+    line-height:
+        1.5;
+}
+
+
+button,
+a {
+    font-family:
+        inherit;
+}
+
+
+button {
+    cursor:
+        pointer;
+}
+
+
+.premium-page {
+    width:
+        100%;
+
+    max-width:
+        900px;
+
+    margin:
+        0 auto;
+
+    padding:
+        22px 18px 50px;
+}
+
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.premium-back {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        7px;
+
+    min-height:
+        42px;
+
+    padding:
+        9px 16px;
+
+    margin-bottom:
+        18px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        13px;
+
+    color:
+        var(--blue);
+
+    text-decoration:
+        none;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    box-shadow:
+        0 5px 16px
+        rgba(25, 88, 160, 0.07);
+
+    transition:
+        0.2s ease;
+}
+
+
+.premium-back:hover {
+    background:
+        var(--blue-light);
+
+    border-color:
+        var(--blue);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.premium-back:active {
+    transform:
+        translateY(0);
+}
+
+
+
+/* =========================================================
+   PREMIUM HEADER
+========================================================= */
+
+.premium-header {
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    padding:
+        30px 25px;
+
+    margin-bottom:
+        18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #083b83 0%,
+            #1268d9 55%,
+            #2388ed 100%
+        );
+
+    color:
+        var(--white);
+
+    border-radius:
+        26px;
+
+    box-shadow:
+        0 18px 40px
+        rgba(18, 104, 217, 0.22);
+}
+
+
+.premium-header::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        220px;
+
+    height:
+        220px;
+
+    right:
+        -100px;
+
+    top:
+        -100px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius:
+        50%;
+}
+
+
+.premium-header::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        160px;
+
+    height:
+        160px;
+
+    right:
+        30px;
+
+    bottom:
+        -120px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border-radius:
+        50%;
+}
+
+
+.premium-crown {
+    position:
+        relative;
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-bottom:
+        15px;
+
+    background:
+        rgba(255,255,255,0.14);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.18);
+
+    border-radius:
+        17px;
+
+    font-size:
+        27px;
+
+    z-index:
+        2;
+}
+
+
+.premium-label {
+    position:
+        relative;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    padding:
+        7px 13px;
+
+    margin-bottom:
+        10px;
+
+    background:
+        rgba(255,255,255,0.13);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.18);
+
+    border-radius:
+        999px;
+
+    color:
+        #ffe05a;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.5px;
+
+    z-index:
+        2;
+}
+
+
+.premium-header h1 {
+    position:
+        relative;
+
+    margin-bottom:
+        8px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(
+            28px,
+            6vw,
+            42px
+        );
+
+    line-height:
+        1.1;
+
+    font-weight:
+        800;
+
+    z-index:
+        2;
+}
+
+
+.premium-header p {
+    position:
+        relative;
+
+    max-width:
+        650px;
+
+    color:
+        rgba(255,255,255,0.84);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+
+    z-index:
+        2;
+}
+
+
+
+/* =========================================================
+   PREMIUM HERO
+========================================================= */
+
+.premium-hero {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    padding:
+        20px;
+
+    margin-bottom:
+        20px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.hero-icon {
+    width:
+        52px;
+
+    height:
+        52px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        var(--blue-light);
+
+    border:
+        1px solid #d4e7ff;
+
+    border-radius:
+        16px;
+
+    font-size:
+        25px;
+}
+
+
+.premium-hero h2 {
+    margin-bottom:
+        3px;
+
+    font-size:
+        17px;
+
+    font-weight:
+        800;
+}
+
+
+.premium-hero p {
+    color:
+        var(--muted);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.6;
+}
+
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.premium-section {
+    padding:
+        21px;
+
+    margin-bottom:
+        18px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.section-heading {
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        12px;
+
+    margin-bottom:
+        16px;
+}
+
+
+.section-heading > span {
+    width:
+        42px;
+
+    height:
+        42px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        var(--blue-light);
+
+    border-radius:
+        13px;
+
+    font-size:
+        21px;
+}
+
+
+.section-heading h2 {
+    margin-bottom:
+        2px;
+
+    font-size:
+        18px;
+
+    font-weight:
+        800;
+}
+
+
+.section-heading p {
+    color:
+        var(--muted);
+
+    font-size:
+        11px;
+}
+
+
+
+/* =========================================================
+   FEATURE LIST
+========================================================= */
+
+.premium-features {
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        10px;
+}
+
+
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.premium-feature-card {
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        13px;
+
+    padding:
+        15px;
+
+    background:
+        var(--blue-soft);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        16px;
+
+    transition:
+        0.2s ease;
+}
+
+
+.premium-feature-card:hover {
+    border-color:
+        #b8d5f7;
+
+    background:
+        #eef6ff;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 7px 20px
+        rgba(25, 88, 160, 0.07);
+}
+
+
+
+/* =========================================================
+   FEATURE ICON
+========================================================= */
+
+.feature-icon {
+    width:
+        47px;
+
+    height:
+        47px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        14px;
+
+    font-size:
+        22px;
+}
+
+
+.feature-icon.blue {
+    background:
+        var(--blue-light);
+
+    border:
+        1px solid #d2e5fc;
+}
+
+
+
+/* =========================================================
+   FEATURE CONTENT
+========================================================= */
+
+.feature-content {
+    flex:
+        1;
+
+    min-width:
+        0;
+
+    padding-right:
+        8px;
+}
+
+
+.feature-content h3 {
+    margin-bottom:
+        3px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+}
+
+
+.feature-content p {
+    color:
+        var(--muted);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.55;
+}
+
+
+
+/* =========================================================
+   FEATURE LOCK
+========================================================= */
+
+.feature-lock {
+    width:
+        32px;
+
+    height:
+        32px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        10px;
+
+    font-size:
+        14px;
+}
+
+
+
+/* =========================================================
+   PREMIUM STATUS
+========================================================= */
+
+.premium-status-card {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        13px;
+
+    padding:
+        17px;
+
+    margin-bottom:
+        18px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.status-icon {
+    width:
+        45px;
+
+    height:
+        45px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        #fff8d8;
+
+    border:
+        1px solid #f2e4a3;
+
+    border-radius:
+        13px;
+
+    font-size:
+        21px;
+}
+
+
+.premium-status-card strong {
+    display:
+        block;
+
+    margin-bottom:
+        3px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+}
+
+
+.premium-status-card p {
+    color:
+        var(--muted);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.5;
+}
+
+
+
+/* =========================================================
+   UPGRADE CARD
+========================================================= */
+
+.premium-upgrade-card {
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    text-align:
+        center;
+
+    padding:
+        30px 22px;
+
+    margin-bottom:
+        20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #eef6ff 100%
+        );
+
+    border:
+        2px solid #cfe3fb;
+
+    border-radius:
+        24px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(18,104,217,0.12);
+}
+
+
+.premium-upgrade-card::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    top:
+        -110px;
+
+    right:
+        -80px;
+
+    background:
+        rgba(18,104,217,0.07);
+
+    border-radius:
+        50%;
+}
+
+
+.upgrade-icon {
+    position:
+        relative;
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin:
+        0 auto 12px;
+
+    background:
+        var(--blue-light);
+
+    border:
+        1px solid #cfe3fb;
+
+    border-radius:
+        17px;
+
+    font-size:
+        27px;
+}
+
+
+.premium-upgrade-card h2 {
+    position:
+        relative;
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        20px;
+
+    font-weight:
+        800;
+}
+
+
+.premium-upgrade-card > p {
+    position:
+        relative;
+
+    max-width:
+        500px;
+
+    margin:
+        0 auto 18px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.6;
+}
+
+
+
+/* =========================================================
+   MAIN UPGRADE BUTTON
+========================================================= */
+
+.upgrade-premium-btn {
+    position:
+        relative;
+
+    width:
+        100%;
+
+    max-width:
+        500px;
+
+    min-height:
+        53px;
+
+    padding:
+        12px 18px;
+
+    border:
+        none;
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b5fc5,
+            #1678e8
+        );
+
+    color:
+        #ffffff;
+
+    font-size:
+        14px;
+
+    font-weight:
+        800;
+
+    box-shadow:
+        0 9px 22px
+        rgba(18,104,217,0.25);
+
+    transition:
+        0.2s ease;
+}
+
+
+.upgrade-premium-btn:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #084fa7,
+            #1268d9
+        );
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(18,104,217,0.30);
+}
+
+
+.upgrade-premium-btn:active {
+    transform:
+        translateY(0);
+
+    box-shadow:
+        0 6px 15px
+        rgba(18,104,217,0.20);
+}
+
+
+
+/* =========================================================
+   RESTORE PURCHASE
+========================================================= */
+
+.restore-purchase-btn {
+    display:
+        block;
+
+    width:
+        100%;
+
+    max-width:
+        500px;
+
+    min-height:
+        43px;
+
+    margin:
+        10px auto 0;
+
+    padding:
+        9px 15px;
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    color:
+        var(--blue);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    border-radius:
+        10px;
+
+    transition:
+        0.2s ease;
+}
+
+
+.restore-purchase-btn:hover {
+    background:
+        var(--blue-light);
+}
+
+
+
+/* =========================================================
+   PAYMENT NOTE
+========================================================= */
+
+.premium-payment-note {
+    display:
+        block;
+
+    max-width:
+        500px;
+
+    margin:
+        10px auto 0;
+
+    color:
+        #8a97a8;
+
+    font-size:
+        9px;
+
+    line-height:
+        1.5;
+}
+
+
+
+/* =========================================================
+   PREMIUM FOOTER
+========================================================= */
+
+.premium-footer {
+    padding:
+        10px 0;
+
+    text-align:
+        center;
+}
+
+
+.premium-footer p {
+    color:
+        #8a97a8;
+
+    font-size:
+        10px;
+}
+
+
+
+/* =========================================================
+   PREMIUM ACTIVE STATE
+========================================================= */
+
+body.premium-active
+.premium-status-card {
+    border-color:
+        #bce7d6;
+
+    background:
+        #f3fcf8;
+}
+
+
+body.premium-active
+.status-icon {
+    background:
+        #e2f8ee;
+
+    border-color:
+        #c1ebd9;
+}
+
+
+body.premium-active
+.upgrade-premium-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #11835f,
+            #19a875
+        );
+}
+
+
+
+/* =========================================================
+   FOCUS / ACCESSIBILITY
+========================================================= */
+
+button:focus-visible,
+a:focus-visible {
+    outline:
+        3px solid
+        rgba(18,104,217,0.25);
+
+    outline-offset:
+        3px;
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .premium-page {
+        padding:
+            16px 13px 40px;
+    }
+
+
+    .premium-header {
+        padding:
+            25px 20px;
+
+        border-radius:
+            22px;
+    }
+
+
+    .premium-header h1 {
+        font-size:
+            29px;
+    }
+
+
+    .premium-header p {
+        font-size:
+            12px;
+    }
+
+
+    .premium-hero {
+        padding:
+            17px;
+    }
+
+
+    .premium-section {
+        padding:
+            17px;
+    }
+
+
+    .premium-feature-card {
+      padding:
+            13px;
+    }
+
+
+    .feature-icon {
+        width:
+            43px;
+
+        height:
+            43px;
+
+        font-size:
+            20px;
+    }
+
+
+    .feature-content h3 {
+        font-size:
+            12px;
+    }
+
+
+    .feature-content p {
+        font-size:
+            9px;
+    }
+
+
+    .feature-lock {
+        width:
+            29px;
+
+        height:
+            29px;
+    }
+
+
+    .premium-upgrade-card {
+        padding:
+            25px 16px;
+    }
+
+}
+
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .premium-header h1 {
+        font-size:
+            26px;
+    }
+
+
+    .premium-feature-card {
+        gap:
+            9px;
+    }
+
+
+    .feature-content {
+        padding-right:
+            2px;
+    }
+
+
+    .upgrade-premium-btn {
+        font-size:
+            12px;
+    }
+
+}
+
+
+/* =========================================================
+   END STUDYMATE PREMIUM CSS
+========================================================= */

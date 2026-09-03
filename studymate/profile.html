@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>StudyMate Profile</title>
+
+<link
+    rel="stylesheet"
+    href="style.css"
+>
+
+</head>
+
+
+<body class="profile-page">
+
+
+<div class="profile-container">
+
+
+    <!-- =========================================
+         PROFILE PICTURE
+    ========================================== -->
+
+    <div
+        class="profile-avatar"
+        id="profileAvatar"
+        title="Change profile picture"
+    >
+        👤
+    </div>
+
+
+    <input
+        type="file"
+        id="profilePictureInput"
+        accept="image/*"
+        style="display:none;"
+    >
+
+
+    <button
+        type="button"
+        id="changePictureBtn"
+        class="profile-picture-btn"
+    >
+        🖼️ Change Picture
+    </button>
+
+
+    <!-- =========================================
+         PROFILE NAME
+    ========================================== -->
+
+    <h1
+        class="profile-title"
+        id="profileNameTitle"
+    >
+        My Profile
+    </h1>
+
+
+    <p class="profile-subtitle">
+        Manage your StudyMate account
+    </p>
+
+
+    <div class="profile-card">
+
+
+        <!-- NAME -->
+
+        <p>
+            <strong>
+                Name
+            </strong>
+        </p>
+
+        <h3 id="studentName">
+            Student
+        </h3>
+
+
+        <button
+            type="button"
+            id="editNameBtn"
+            class="profile-edit-btn"
+        >
+            ✏️ Edit Name
+        </button>
+
+
+        <div
+            id="nameEditArea"
+            style="display:none;"
+        >
+
+            <input
+                type="text"
+                id="studentNameInput"
+                placeholder="Enter your name"
+                maxlength="40"
+            >
+
+            <button
+                type="button"
+                id="saveNameBtn"
+                class="profile-save-btn"
+            >
+                Save Name
+            </button>
+
+        </div>
+
+
+        <hr>
+
+
+        <!-- EMAIL -->
+
+        <p>
+            <strong>
+                Email
+            </strong>
+        </p>
+
+        <h3 id="studentEmail">
+            Loading...
+        </h3>
+
+
+        <hr>
+
+
+        <!-- COUNTRY -->
+
+        <p>
+            <strong>
+                🌍 Country
+            </strong>
+        </p>
+
+
+        <h3 id="studentCountry">
+            🌍 Select Country
+        </h3>
+
+
+        <button
+            type="button"
+            id="editCountryBtn"
+            class="profile-edit-btn"
+        >
+            🌍 Edit Country
+        </button>
+
+
+        <div
+            id="countryEditArea"
+            style="display:none;"
+        >
+
+         <select id="countrySelect">
+
+    <option value="">
+        Select your country
+    </option>
+
+    <option value="Nigeria">
+        🇳🇬 Nigeria
+    </option>
+
+    <option value="Ghana">
+        🇬🇭 Ghana
+    </option>
+
+    <option value="Kenya">
+        🇰🇪 Kenya
+    </option>
+
+    <option value="South Africa">
+        🇿🇦 South Africa
+    </option>
+
+    <option value="Uganda">
+        🇺🇬 Uganda
+    </option>
+
+    <option value="Tanzania">
+        🇹🇿 Tanzania
+    </option>
+
+    <option value="Sierra Leone">
+        🇸🇱 Sierra Leone
+    </option>
+
+    <option value="Liberia">
+        🇱🇷 Liberia
+    </option>
+
+    <option value="The Gambia">
+        🇬🇲 The Gambia
+    </option>
+
+    <option value="United Kingdom">
+        🇬🇧 United Kingdom
+    </option>
+
+    <option value="United States">
+        🇺🇸 United States
+    </option>
+
+    <option value="Canada">
+        🇨🇦 Canada
+    </option>
+
+    <option value="Australia">
+        🇦🇺 Australia
+    </option>
+
+    <option value="New Zealand">
+        🇳🇿 New Zealand
+    </option>
+
+    <option value="Ireland">
+        🇮🇪 Ireland
+    </option>
+
+    <option value="India">
+        🇮🇳 India
+    </option>
+
+    <option value="Pakistan">
+        🇵🇰 Pakistan
+    </option>
+
+    <option value="Bangladesh">
+        🇧🇩 Bangladesh
+    </option>
+
+    <option value="Singapore">
+        🇸🇬 Singapore
+    </option>
+
+    <option value="Malaysia">
+        🇲🇾 Malaysia
+    </option>
+
+    <option value="Philippines">
+        🇵🇭 Philippines
+    </option>
+
+    <option value="Jamaica">
+        🇯🇲 Jamaica
+    </option>
+
+    <option value="Trinidad and Tobago">
+        🇹🇹 Trinidad and Tobago
+    </option>
+
+    <option value="Barbados">
+        🇧🇧 Barbados
+    </option>
+
+    <option value="Bahamas">
+        🇧🇸 Bahamas
+    </option>
+
+    <option value="Belize">
+        🇧🇿 Belize
+    </option>
+
+    <option value="Guyana">
+        🇬🇾 Guyana
+    </option>
+
+    <option value="Fiji">
+        🇫🇯 Fiji
+    </option>
+
+    <option value="Zimbabwe">
+        🇿🇼 Zimbabwe
+    </option>
+
+    <option value="Zambia">
+        🇿🇲 Zambia
+    </option>
+
+    <option value="Botswana">
+        🇧🇼 Botswana
+    </option>
+
+    <option value="Namibia">
+        🇳🇦 Namibia
+    </option>
+
+    <option value="Rwanda">
+        🇷🇼 Rwanda
+    </option>
+
+    <option value="United Arab Emirates">
+        🇦🇪 United Arab Emirates
+    </option>
+
+    <option value="Other">
+        🌍 Other
+    </option>
+
+</select>
+
+
+            <button
+                type="button"
+                id="saveCountryBtn"
+                class="profile-save-btn"
+            >
+                Save Country
+            </button>
+
+        </div>
+
+
+        <hr>
+
+
+        <!-- MEMBER SINCE -->
+
+        <p>
+            <strong>
+                📅 Member Since
+            </strong>
+        </p>
+
+        <h3 id="memberSince">
+            Loading...
+        </h3>
+
+
+    </div>
+<!-- =========================================
+     PRIVACY POLICY
+========================================= -->
+
+<a
+  href="privacy-policy.html"
+    class="profile-edit-btn"
+    style="display:block; text-align:center; text-decoration:none;"
+>
+    🔐 Privacy Policy
+</a>
+
+
+<!-- =========================================
+     ACCOUNT DELETION
+========================================= -->
+
+<button
+    type="button"
+    id="deleteAccountBtn"
+    class="profile-edit-btn"
+    style="background:#d92d2d;"
+>
+    🗑️ Delete My Account
+</button>
+
+    <!-- =========================================
+         LOGOUT
+    ========================================== -->
+
+    <button
+        id="logoutBtn"
+        class="logout-btn"
+    >
+        🚪 Logout
+    </button>
+
+
+    <!-- =========================================
+         BACK TO DASHBOARD
+    ========================================== -->
+
+    <button
+        type="button"
+        class="back-btn"
+        onclick="location.href='dashboard.html'"
+    >
+        ⬅ Back to Dashboard
+    </button>
+
+
+</div>
+
+
+<script
+    type="module"
+    src="profile.js"
+></script>
+
+<script src="navigation.js"></script>
+</body>
+
+</html>

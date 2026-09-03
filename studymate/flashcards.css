@@ -1,0 +1,630 @@
+/* ==========================================
+   STUDYMATE FLASHCARDS
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:linear-gradient(180deg,#08152f,#10285f);
+    color:#fff;
+    min-height:100vh;
+}
+
+.flashcards-container{
+    width:100%;
+    max-width:520px;
+    margin:auto;
+    padding:20px;
+}
+
+
+/* ================= HEADER ================= */
+
+.flashcard-header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:25px;
+}
+
+.back-arrow{
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#24458d;
+    color:#fff;
+    font-size:24px;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.back-arrow:hover{
+    transform:scale(1.05);
+}
+
+.flashcard-header h1{
+    margin:0;
+    font-size:34px;
+    font-weight:700;
+    color:#fff;
+}
+
+.flashcard-header p{
+    margin-top:4px;
+    font-size:16px;
+    color:#b9c9ff;
+}
+
+
+/* ================= PROGRESS ================= */
+
+.progress-container{
+    margin-bottom:30px;
+}
+
+.progress-text{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:18px;
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.progress-bar{
+    width:100%;
+    height:14px;
+    background:#24365d;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.progress{
+    width:0%;
+    height:100%;
+    border-radius:30px;
+    background:linear-gradient(90deg,#18d9a5,#29b6f6);
+    transition:.4s;
+}
+
+
+/* ===========================
+   FLASHCARD
+=========================== */
+
+.flashcard{
+    width:100%;
+    height:500px;
+    perspective:1200px;
+    cursor:pointer;
+    margin-bottom:30px;
+}
+
+.card-inner{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:transform .7s ease;
+}
+
+.flashcard.flipped .card-inner{
+    transform:rotateY(180deg);
+}
+
+.card-face{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:30px;
+    backface-visibility:hidden;
+    display:flex;
+    flex-direction:column;
+    padding:30px;
+    box-shadow:0 18px 45px rgba(0,0,0,.45);
+}
+
+.card-front{
+    background:linear-gradient(180deg,#28459a,#223a85);
+    color:white;
+}
+
+.card-back{
+    background:linear-gradient(180deg,#2563eb,#1d4ed8);
+    color:white;
+    transform:rotateY(180deg);
+}
+
+.card-label{
+    font-size:18px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#dbeafe;
+    margin-bottom:20px;
+}
+
+.card-content{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:34px;
+    font-weight:700;
+    line-height:1.5;
+}
+
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.flashcard-buttons{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    margin-bottom:25px;
+}
+
+.flashcard-buttons button{
+    padding:16px;
+    border:none;
+    border-radius:18px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    color:white;
+    transition:.25s;
+    box-shadow:0 8px 20px rgba(0,0,0,.30);
+}
+
+.previous-card{
+    background:#2563eb;
+}
+
+.shuffle-card{
+    background:#3b82f6;
+}
+
+.favorite-card{
+    background:#f59e0b;
+}
+
+.next-card{
+    background:#16a34a;
+    grid-column:1 / 3;
+}
+
+.flashcard-buttons button:hover{
+    transform:translateY(-3px);
+    filter:brightness(1.05);
+}
+
+
+/* ===========================
+   CARD COUNTER
+=========================== */
+
+#cardCounter{
+    margin:20px 0;
+    text-align:center;
+    font-size:18px;
+    font-weight:600;
+    color:#dbeafe;
+}
+
+
+/* ===========================
+   BACK BUTTON
+=========================== */
+
+.back-btn{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    transform:translateY(-3px);
+}
+
+
+/* =========================================================
+   ✨ PREMIUM FLASHCARD SUBJECT PAGE
+========================================================= */
+
+.subjects-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:30px;
+
+}
+
+
+/* =========================================================
+   💙 PREMIUM GLOWING SUBJECT CARD
+========================================================= */
+
+.subject-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071f5c 0%,
+            #0b3d91 45%,
+            #123f9f 100%
+        );
+
+    border-radius:25px;
+
+    padding:25px;
+
+    height:170px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    border:1px solid rgba(96,165,250,.45);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.40),
+        0 0 12px rgba(37,99,235,.25),
+        inset 0 1px 0 rgba(255,255,255,.16);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+
+}
+
+
+/* =========================================================
+   ✨ MOVING SHINE
+========================================================= */
+
+.subject-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-60%;
+
+    left:-80%;
+
+    width:55%;
+
+    height:220%;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.38),
+            rgba(255,255,255,.08),
+            transparent
+        );
+
+    transform:rotate(18deg);
+
+    animation:
+        flashcardSubjectShine 4.5s ease-in-out infinite;
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================================
+   💫 SOFT BLUE LIGHT
+========================================================= */
+
+.subject-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+
+    height:90px;
+
+    top:-35px;
+
+    right:-25px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(56,189,248,.28),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================================
+   KEEP CONTENT ABOVE EFFECTS
+========================================================= */
+
+.subject-card .subject-icon,
+.subject-card h3{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* =========================================================
+   🚀 HOVER GLOW
+========================================================= */
+
+.subject-card:hover{
+
+    transform:
+        translateY(-7px)
+        scale(1.02);
+
+    border-color:#38bdf8;
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.45),
+        0 0 18px rgba(37,99,235,.55),
+        0 0 35px rgba(14,165,233,.30),
+        inset 0 1px 0 rgba(255,255,255,.25);
+
+}
+
+
+/* =========================================================
+   💙 PRESS EFFECT
+========================================================= */
+
+.subject-card:active{
+
+    transform:scale(.97);
+
+}
+
+
+/* =========================================================
+   ✨ SHINE ANIMATION
+========================================================= */
+
+@keyframes flashcardSubjectShine{
+
+    0%{
+        left:-80%;
+        opacity:0;
+    }
+
+    20%{
+        opacity:0;
+    }
+
+    40%{
+        opacity:1;
+    }
+
+    60%{
+        left:130%;
+        opacity:.75;
+    }
+
+    100%{
+        left:130%;
+        opacity:0;
+    }
+
+}
+
+
+/* =========================================================
+   SUBJECT ICON
+========================================================= */
+
+.subject-icon{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:52px;
+
+    margin-bottom:15px;
+
+    filter:
+        drop-shadow(
+            0 4px 8px rgba(0,0,0,.35)
+        );
+
+}
+
+
+/* =========================================================
+   SUBJECT TITLE
+========================================================= */
+
+.subject-card h3{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:18px;
+
+    text-align:center;
+
+    color:white;
+
+    font-weight:700;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,.35);
+
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:600px){
+
+    .flashcards-container{
+        padding:18px;
+    }
+
+    .flashcard{
+        height:430px;
+    }
+
+    .card-content{
+        font-size:28px;
+    }
+
+    .subject-card{
+        height:150px;
+    }
+
+    .subject-icon{
+        font-size:42px;
+    }
+
+    .subject-card h3{
+        font-size:16px;
+    }
+
+    .flashcard-buttons button{
+        font-size:16px;
+    }
+
+}
+
+
+/* ===========================
+   SAVED CARD
+=========================== */
+
+.saved-card{
+
+    background:#8b5cf6;
+
+    color:white;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:18px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    width:100%;
+
+    margin-top:15px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.30);
+
+}
+/* ==========================================
+   💙 PREMIUM STUDYMATE FLASHCARDS HEADER
+========================================== */
+
+.flashcards-container h1{
+    width:100%;
+
+    display:block;
+
+    text-align:center;
+
+    margin:8px auto 18px;
+
+    color:#ffffff;
+
+    font-size:36px;
+
+    font-weight:800;
+
+    letter-spacing:-0.5px;
+
+    line-height:1.25;
+
+    text-shadow:
+        0 3px 6px rgba(0,0,0,.75),
+        0 6px 14px rgba(0,0,0,.45),
+        0 0 18px rgba(37,99,235,.35);
+}
+
+
+/* Premium centered underline */
+
+.flashcards-container h1::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:4px;
+
+    margin:12px auto 0;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #071f5c,
+            #0b3d91,
+            #2563eb
+        );
+
+    box-shadow:
+        0 0 8px rgba(37,99,235,.65),
+        0 0 18px rgba(37,99,235,.30);
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Literature Flashcards</title>
+
+<link rel="stylesheet" href="flashcards.css">
+
+</head>
+
+<body>
+
+<div class="flashcards-container">
+
+    <div class="flashcard-header">
+
+        <button class="back-arrow"
+        onclick="location.href='flashcards.html'">
+            ←
+        </button>
+
+        <div>
+            <h1>Literature</h1>
+            <p>Flashcards • Review key concepts</p>
+        </div>
+
+    </div>
+
+    <!-- Progress -->
+
+    <div class="progress-container">
+
+        <div class="progress-text">
+
+            <span id="progressPercent">0%</span>
+
+            <span id="progressCount">0 / 200</span>
+
+        </div>
+
+        <div class="progress-bar">
+
+            <div class="progress" id="progressFill"></div>
+
+        </div>
+
+    </div>
+
+    <!-- Flashcard -->
+
+    <div class="flashcard">
+
+        <div class="card-inner">
+
+            <div class="card-face card-front">
+
+                <div class="card-label">
+                    Question
+                </div>
+
+                <div class="card-content"></div>
+
+            </div>
+
+            <div class="card-face card-back">
+
+                <div class="card-label">
+                    Answer
+                </div>
+
+                <div class="card-content"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="flashcard-buttons">
+
+        <button class="previous-card">
+            ⬅ Previous
+        </button>
+
+        <button class="shuffle-card">
+            🔀 Shuffle
+        </button>
+
+        <button class="favorite-card">
+            ⭐ Favorite
+        </button>
+
+        <button class="next-card">
+            Next ➡
+        </button>
+
+    </div>
+
+    <!-- Card Counter -->
+
+    <p id="cardCounter">
+        📖 Card 1 of 200
+    </p>
+
+    <!-- Favorites -->
+
+    <button class="saved-card"
+onclick="location.href='favorites.html'">
+
+📂 Saved
+
+</button>
+
+    </button>
+
+    <br><br>
+
+    <!-- Back -->
+
+    <button class="back-btn"
+    onclick="location.href='flashcards.html'">
+
+        ⬅ Back to Subjects
+
+    </button>
+
+</div>
+
+<script src="literatureflashcards.js"></script>
+<script src="navigation.js"></script>
+</body>
+
+</html>

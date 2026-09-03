@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Formula Book</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="computer-formula">
+
+<div class="formula-container">
+
+<h1>💻 Computer Formula Book</h1>
+
+
+<p class="formula-subtitle">
+Master every computer formula topic in one place.
+</p>
+
+<input
+type="text"
+id="formulaSearch"
+class="formula-search"
+placeholder="🔍 Search Formula...">
+
+<!-- =================   COMPUTER FORMULAS START HERE ================= -->
+
+
+<!-- ================= NUMBER SYSTEMS ================= -->
+
+<h2 class="formula-topic">📂 Number Systems</h2>
+
+<div class="formula-card">
+
+<h3>Decimal to Binary</h3>
+
+<div class="formula-box">
+Repeatedly Divide by 2 and Read the Remainders from Bottom to Top
+</div>
+
+<p><b>📖 Meaning:</b> Converts a decimal (base 10) number into a binary (base 2) number.</p>
+
+<p><b>🎯 When to Use:</b> Used when representing numbers in computer systems.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>25₁₀ = 11001₂</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Divide by 2 until the quotient becomes 0, then read the remainders upwards.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not read the remainders from top to bottom.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Binary to Decimal</h3>
+
+<div class="formula-box">
+Decimal = Σ (Binary Digit × 2ⁿ)
+</div>
+
+<p><b>📖 Meaning:</b> Converts a binary number into its decimal equivalent.</p>
+
+<p><b>🎯 When to Use:</b> Used when interpreting binary values.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>10110₂ = (1×2⁴) + (0×2³) + (1×2²) + (1×2¹) + (0×2⁰) = 22₁₀</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Each position represents a power of 2.</p>
+
+<p><b>⚠️ Common Mistake:</b> Start counting powers from 0 at the rightmost digit.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Decimal to Hexadecimal</h3>
+
+<div class="formula-box">
+Repeatedly Divide by 16 and Read the Remainders from Bottom to Top
+</div>
+
+<p><b>📖 Meaning:</b> Converts a decimal number into hexadecimal (base 16).</p>
+
+<p><b>🎯 When to Use:</b> Used in memory addressing and programming.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>255₁₀ = FF₁₆</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Hexadecimal uses digits 0–9 and letters A–F.</p>
+
+<p><b>⚠️ Common Mistake:</b> Remember A=10, B=11, C=12, D=13, E=14, F=15.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Hexadecimal to Decimal</h3>
+
+<div class="formula-box">
+Decimal = Σ (Hex Digit × 16ⁿ)
+</div>
+
+<p><b>📖 Meaning:</b> Converts a hexadecimal number into decimal.</p>
+
+<p><b>🎯 When to Use:</b> Used when interpreting hexadecimal values.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>2A₁₆ = (2×16¹) + (10×16⁰) = 42₁₀</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Each position represents a power of 16.</p>
+
+<p><b>⚠️ Common Mistake:</b> Convert A–F into their decimal values before calculating.</p>
+
+</div>
+<!-- ================= DATA STORAGE UNITS ================= -->
+
+<h2 class="formula-topic">📂 Data Storage Units</h2>
+
+<div class="formula-card">
+
+<h3>Bit and Byte</h3>
+
+<div class="formula-box">
+1 Byte = 8 Bits
+</div>
+
+<p><b>📖 Meaning:</b> A bit is the smallest unit of data, while a byte is made up of 8 bits.</p>
+
+<p><b>🎯 When to Use:</b> Used when measuring digital data and storage capacity.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Bits = Bytes × 8</li>
+<li>Bytes = Bits ÷ 8</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> One byte always contains 8 bits.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse <b>b</b> (bit) with <b>B</b> (Byte).</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Kilobyte (KB)</h3>
+
+<div class="formula-box">
+1 KB = 1024 Bytes
+</div>
+
+<p><b>📖 Meaning:</b> A kilobyte is equal to 1,024 bytes in computer storage.</p>
+
+<p><b>🎯 When to Use:</b> Used for measuring small files and memory.</p>
+
+<p><b>📝 Conversion:</b></p>
+
+<ul>
+<li>Bytes = KB × 1024</li>
+<li>KB = Bytes ÷ 1024</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Computers count in powers of 2, so 1 KB = 1024 bytes.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not use 1000 instead of 1024 in binary-based storage questions.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Megabyte, Gigabyte and Terabyte</h3>
+
+<div class="formula-box">
+1 MB = 1024 KB<br>
+1 GB = 1024 MB<br>
+1 TB = 1024 GB
+</div>
+
+<p><b>📖 Meaning:</b> These units are used to measure increasingly larger amounts of digital storage.</p>
+
+<p><b>🎯 When to Use:</b> Used when measuring files, RAM, hard drives and SSDs.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>MB = GB × 1024</li>
+<li>GB = TB × 1024</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Remember the order: KB → MB → GB → TB.</p>
+
+<p><b>⚠️ Common Mistake:</b> Always convert step by step between units.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Total Storage Capacity</h3>
+
+<div class="formula-box">
+Storage Used (%) = (Used Storage / Total Storage) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the percentage of storage space that has been used.</p>
+
+<p><b>🎯 When to Use:</b> Used to monitor disk usage and available space.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Used Storage = (Percentage × Total Storage) ÷ 100</li>
+<li>Free Storage = Total Storage − Used Storage</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Percentage always compares the used part with the total.</p>
+
+<p><b>⚠️ Common Mistake:</b> Ensure both storage values use the same unit (MB, GB, etc.).</p>
+
+</div>
+<!-- ================= BINARY ARITHMETIC ================= -->
+
+<h2 class="formula-topic">📂 Binary Arithmetic</h2>
+
+<div class="formula-card">
+
+<h3>Binary Addition Rules</h3>
+
+<div class="formula-box">
+0 + 0 = 0<br>
+0 + 1 = 1<br>
+1 + 0 = 1<br>
+1 + 1 = 10<br>
+1 + 1 + 1 = 11
+</div>
+
+<p><b>📖 Meaning:</b> These rules are used to add binary numbers.</p>
+
+<p><b>🎯 When to Use:</b> Used in digital electronics and computer calculations.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>1011₂ + 0101₂ = 10000₂</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> In binary, 1 + 1 produces 0 and carries 1.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not use decimal addition rules directly.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Binary Subtraction Rules</h3>
+
+<div class="formula-box">
+0 − 0 = 0<br>
+1 − 0 = 1<br>
+1 − 1 = 0<br>
+10 − 1 = 1
+</div>
+
+<p><b>📖 Meaning:</b> These rules are used to subtract binary numbers.</p>
+
+<p><b>🎯 When to Use:</b> Used in binary arithmetic operations.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>1010₂ − 0011₂ = 0111₂</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Borrow from the next bit when necessary.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not forget to borrow correctly.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>1's Complement</h3>
+
+<div class="formula-box">
+1's Complement = Change Every 0 to 1 and Every 1 to 0
+</div>
+
+<p><b>📖 Meaning:</b> Produces the inverse of a binary number.</p>
+
+<p><b>🎯 When to Use:</b> Used in binary subtraction and error detection.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>101100 → 010011</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Flip every bit.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not change the number of bits.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>2's Complement</h3>
+
+<div class="formula-box">
+2's Complement = 1's Complement + 1
+</div>
+
+<p><b>📖 Meaning:</b> Represents negative binary numbers and simplifies subtraction.</p>
+
+<p><b>🎯 When to Use:</b> Used in computer arithmetic and processor operations.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>101100 → 010011 → +1 = 010100</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Flip all bits, then add 1.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not forget the final +1 step.</p>
+
+</div>
+<!-- ================= LOGIC GATES ================= -->
+
+<h2 class="formula-topic">📂 Logic Gates</h2>
+
+<div class="formula-card">
+
+<h3>AND Gate</h3>
+
+<div class="formula-box">
+Y = A · B
+</div>
+
+<p><b>📖 Meaning:</b> The output is 1 only when both inputs are 1.</p>
+
+<p><b>🎯 When to Use:</b> Used when all conditions must be true before an output is produced.</p>
+
+<p><b>📝 Truth Table:</b></p>
+
+<ul>
+<li>0 AND 0 = 0</li>
+<li>0 AND 1 = 0</li>
+<li>1 AND 0 = 0</li>
+<li>1 AND 1 = 1</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> AND means <b>both must be true</b>.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse AND with OR.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>OR Gate</h3>
+
+<div class="formula-box">
+Y = A + B
+</div>
+
+<p><b>📖 Meaning:</b> The output is 1 if at least one input is 1.</p>
+
+<p><b>🎯 When to Use:</b> Used when any one condition can produce an output.</p>
+
+<p><b>📝 Truth Table:</b></p>
+
+<ul>
+<li>0 OR 0 = 0</li>
+<li>0 OR 1 = 1</li>
+<li>1 OR 0 = 1</li>
+<li>1 OR 1 = 1</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> OR means <b>one or both</b>.</p>
+
+<p><b>⚠️ Common Mistake:</b> Remember that 1 OR 1 is still 1.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>NOT Gate</h3>
+
+<div class="formula-box">
+Y = A'
+</div>
+
+<p><b>📖 Meaning:</b> Produces the opposite of the input.</p>
+
+<p><b>🎯 When to Use:</b> Used to invert a binary signal.</p>
+
+<p><b>📝 Truth Table:</b></p>
+
+<ul>
+<li>0 → 1</li>
+<li>1 → 0</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> NOT simply flips the input.</p>
+
+<p><b>⚠️ Common Mistake:</b> A NOT gate has only one input.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>NAND Gate</h3>
+
+<div class="formula-box">
+Y = (A · B)'
+</div>
+
+<p><b>📖 Meaning:</b> Produces the opposite output of an AND gate.</p>
+
+<p><b>🎯 When to Use:</b> Used extensively in digital circuit design because it is a universal gate.</p>
+
+<p><b>📝 Truth Table:</b></p>
+
+<ul>
+<li>0 NAND 0 = 1</li>
+<li>0 NAND 1 = 1</li>
+<li>1 NAND 0 = 1</li>
+<li>1 NAND 1 = 0</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> NAND = AND followed by NOT.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not forget the inversion (') at the end of the expression.</p>
+
+</div>
+<!-- ================= BOOLEAN ALGEBRA ================= -->
+
+<h2 class="formula-topic">📂 Boolean Algebra</h2>
+
+<div class="formula-card">
+
+<h3>Identity Law</h3>
+
+<div class="formula-box">
+A + 0 = A<br>
+A · 1 = A
+</div>
+
+<p><b>📖 Meaning:</b> Adding 0 or multiplying by 1 does not change the Boolean value.</p>
+
+<p><b>🎯 When to Use:</b> Used to simplify Boolean expressions.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>X + 0 = X</li>
+<li>Y · 1 = Y</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> 0 changes nothing in OR; 1 changes nothing in AND.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse Identity Law with Null Law.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Null Law</h3>
+
+<div class="formula-box">
+A + 1 = 1<br>
+A · 0 = 0
+</div>
+
+<p><b>📖 Meaning:</b> OR with 1 always gives 1, while AND with 0 always gives 0.</p>
+
+<p><b>🎯 When to Use:</b> Used to simplify logic circuits.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>X + 1 = 1</li>
+<li>Y · 0 = 0</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> 1 dominates OR; 0 dominates AND.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not interchange the two rules.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Idempotent Law</h3>
+
+<div class="formula-box">
+A + A = A<br>
+A · A = A
+</div>
+
+<p><b>📖 Meaning:</b> Repeating the same variable does not change the result.</p>
+
+<p><b>🎯 When to Use:</b> Used to reduce repeated Boolean variables.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>X + X = X</li>
+<li>Y · Y = Y</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> One variable is enough.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not write A + A = 2A.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Complement Law</h3>
+
+<div class="formula-box">
+A + A' = 1<br>
+A · A' = 0
+</div>
+
+<p><b>📖 Meaning:</b> A variable combined with its complement always gives either 1 or 0.</p>
+
+<p><b>🎯 When to Use:</b> Used to simplify Boolean expressions and logic circuits.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>X + X' = 1</li>
+<li>X · X' = 0</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> A value and its opposite cancel each other.</p>
+
+<p><b>⚠️ Common Mistake:</b> Remember that A' means NOT A.</p>
+
+</div>
+<!-- ================= COMPUTER PERFORMANCE ================= -->
+
+<h2 class="formula-topic">📂 Computer Performance</h2>
+
+<div class="formula-card">
+
+<h3>CPU Clock Speed</h3>
+
+<div class="formula-box">
+Clock Speed = Number of Clock Cycles / Second
+</div>
+
+<p><b>📖 Meaning:</b> Measures how many processing cycles the CPU performs every second.</p>
+
+<p><b>🎯 When to Use:</b> Used to compare processor performance.</p>
+
+<p><b>📝 Common Units:</b></p>
+
+<ul>
+<li>1 MHz = 1,000,000 Hz</li>
+<li>1 GHz = 1,000 MHz</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Higher clock speed generally means faster processing.</p>
+
+<p><b>⚠️ Common Mistake:</b> Clock speed alone does not determine overall CPU performance.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Execution Time</h3>
+
+<div class="formula-box">
+Execution Time = Number of Instructions × CPI × Clock Cycle Time
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the total time a processor takes to execute a program.</p>
+
+<p><b>🎯 When to Use:</b> Used to analyse CPU efficiency.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Instructions = Execution Time ÷ (CPI × Clock Cycle Time)</li>
+<li>CPI = Execution Time ÷ (Instructions × Clock Cycle Time)</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> More instructions or higher CPI increases execution time.</p>
+
+<p><b>⚠️ Common Mistake:</b> Ensure all time values are in the same unit.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Clock Cycle Time</h3>
+
+<div class="formula-box">
+Clock Cycle Time = 1 / Clock Speed
+</div>
+
+<p><b>📖 Meaning:</b> The time taken for one CPU clock cycle.</p>
+
+<p><b>🎯 When to Use:</b> Used in processor timing calculations.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>Clock Speed = 2 GHz</li>
+<li>Clock Cycle Time = 1 ÷ 2,000,000,000 s</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Faster clock speed means shorter cycle time.</p>
+
+<p><b>⚠️ Common Mistake:</b> Convert GHz or MHz to Hz before calculating.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>CPU Utilization</h3>
+
+<div class="formula-box">
+CPU Utilization (%) = (CPU Busy Time / Total Time) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Shows the percentage of time the processor is actively working.</p>
+
+<p><b>🎯 When to Use:</b> Used to monitor system performance.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>CPU Busy Time = (Utilization × Total Time) ÷ 100</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Higher utilization means the CPU is busier.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse utilization with CPU clock speed.</p>
+
+</div>
+<!-- ================= CPU CALCULATIONS ================= -->
+
+<h2 class="formula-topic">📂 CPU Calculations</h2>
+
+<div class="formula-card">
+
+<h3>CPU Frequency</h3>
+
+<div class="formula-box">
+Frequency (Hz) = 1 / Time Period (s)
+</div>
+
+<p><b>📖 Meaning:</b> Frequency is the number of CPU clock cycles completed every second.</p>
+
+<p><b>🎯 When to Use:</b> Used to calculate processor speed and timing.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Time Period = 1 ÷ Frequency</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Higher frequency means more cycles every second.</p>
+
+<p><b>⚠️ Common Mistake:</b> Convert MHz and GHz to Hz before calculations.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Million Instructions Per Second (MIPS)</h3>
+
+<div class="formula-box">
+MIPS = Number of Instructions / (Execution Time × 1,000,000)
+</div>
+
+<p><b>📖 Meaning:</b> Measures how many millions of instructions a processor executes each second.</p>
+
+<p><b>🎯 When to Use:</b> Used to compare CPU performance.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Instructions = MIPS × Execution Time × 1,000,000</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> More MIPS generally indicates faster instruction processing.</p>
+
+<p><b>⚠️ Common Mistake:</b> MIPS alone cannot compare processors with different architectures.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Instructions Per Second (IPS)</h3>
+
+<div class="formula-box">
+IPS = Number of Instructions / Execution Time
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the number of instructions executed each second.</p>
+
+<p><b>🎯 When to Use:</b> Used in CPU benchmarking and performance evaluation.</p>
+
+<p><b>📝 Unit:</b></p>
+
+<ul>
+<li>Instructions per second</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Divide total instructions by total execution time.</p>
+
+<p><b>⚠️ Common Mistake:</b> Ensure execution time is measured in seconds.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Average Instruction Time</h3>
+
+<div class="formula-box">
+Average Instruction Time = Total Execution Time / Number of Instructions
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the average time taken to execute one instruction.</p>
+
+<p><b>🎯 When to Use:</b> Used to analyse processor efficiency.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Total Execution Time = Average Instruction Time × Number of Instructions</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Lower average instruction time means faster processing.</p>
+
+<p><b>⚠️ Common Mistake:</b> Keep execution time and instruction count in the correct units.</p>
+
+</div>
+<!-- ================= MEMORY CALCULATIONS ================= -->
+
+<h2 class="formula-topic">📂 Memory Calculations</h2>
+
+<div class="formula-card">
+
+<h3>Memory Capacity</h3>
+
+<div class="formula-box">
+Memory Capacity = Number of Memory Locations × Word Size
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the total amount of data a memory device can store.</p>
+
+<p><b>🎯 When to Use:</b> Used to determine the storage capacity of RAM, ROM, and other memory devices.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Memory Locations = Capacity ÷ Word Size</li>
+<li>Word Size = Capacity ÷ Memory Locations</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Capacity depends on both the number of locations and the size of each location.</p>
+
+<p><b>⚠️ Common Mistake:</b> Ensure all units are the same (bits or bytes).</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Addressable Memory Locations</h3>
+
+<div class="formula-box">
+Memory Locations = 2ⁿ
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the number of memory locations that can be addressed using <b>n</b> address bits.</p>
+
+<p><b>🎯 When to Use:</b> Used in computer architecture and memory design.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>16 address bits = 2¹⁶ = 65,536 memory locations</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Every extra address bit doubles the number of memory locations.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not calculate n² instead of 2ⁿ.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Word Size</h3>
+
+<div class="formula-box">
+Word Size = Number of Bits Processed at Once
+</div>
+
+<p><b>📖 Meaning:</b> The amount of data the CPU processes in a single operation.</p>
+
+<p><b>🎯 When to Use:</b> Used to compare processor architecture (8-bit, 16-bit, 32-bit, 64-bit).</p>
+
+<p><b>📝 Common Word Sizes:</b></p>
+
+<ul>
+<li>8-bit</li>
+<li>16-bit</li>
+<li>32-bit</li>
+<li>64-bit</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Larger word sizes usually allow faster processing of larger data.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse word size with memory capacity.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Memory Usage Percentage</h3>
+
+<div class="formula-box">
+Memory Usage (%) = (Used Memory / Total Memory) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the percentage of memory currently in use.</p>
+
+<p><b>🎯 When to Use:</b> Used for monitoring RAM and storage performance.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Used Memory = (Usage × Total Memory) ÷ 100</li>
+<li>Free Memory = Total Memory − Used Memory</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Usage compares the used part with the total available memory.</p>
+
+<p><b>⚠️ Common Mistake:</b> Ensure both memory values use the same unit (MB, GB, etc.).</p>
+
+</div>
+<!-- ================= FILE SIZE CALCULATIONS ================= -->
+
+<h2 class="formula-topic">📂 File Size Calculations</h2>
+
+<div class="formula-card">
+
+<h3>File Size</h3>
+
+<div class="formula-box">
+File Size = Number of Bits ÷ 8
+</div>
+
+<p><b>📖 Meaning:</b> Converts the total number of bits into bytes to determine the file size.</p>
+
+<p><b>🎯 When to Use:</b> Used when calculating the storage space required for digital files.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Number of Bits = File Size × 8</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Always remember that 1 Byte = 8 Bits.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse bits (b) with Bytes (B).</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Image File Size</h3>
+
+<div class="formula-box">
+Image Size = Width × Height × Colour Depth
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the uncompressed size of a digital image.</p>
+
+<p><b>🎯 When to Use:</b> Used when estimating image storage requirements.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>800 × 600 × 24 bits = 11,520,000 bits</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> More pixels and higher colour depth produce larger files.</p>
+
+<p><b>⚠️ Common Mistake:</b> This formula gives the uncompressed file size only.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Audio File Size</h3>
+
+<div class="formula-box">
+Audio Size = Sample Rate × Bit Depth × Number of Channels × Duration
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the size of an uncompressed audio file.</p>
+
+<p><b>🎯 When to Use:</b> Used in digital audio processing.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>44,100 × 16 × 2 × 60 seconds</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Higher sample rates and longer recordings create larger files.</p>
+
+<p><b>⚠️ Common Mistake:</b> Keep all units consistent when calculating.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Compression Ratio</h3>
+
+<div class="formula-box">
+Compression Ratio = Original File Size ÷ Compressed File Size
+</div>
+
+<p><b>📖 Meaning:</b> Shows how much a file has been reduced after compression.</p>
+
+<p><b>🎯 When to Use:</b> Used to evaluate the effectiveness of file compression.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Compressed Size = Original Size ÷ Compression Ratio</li>
+<li>Original Size = Compression Ratio × Compressed Size</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> A higher compression ratio means a greater reduction in file size.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not subtract the file sizes; divide them.</p>
+
+</div>
+<!-- ================= DATA TRANSMISSION ================= -->
+
+<h2 class="formula-topic">📂 Data Transmission</h2>
+
+<div class="formula-card">
+
+<h3>Data Transfer Rate</h3>
+
+<div class="formula-box">
+Data Transfer Rate = Amount of Data ÷ Time
+</div>
+
+<p><b>📖 Meaning:</b> Calculates how much data is transmitted every second.</p>
+
+<p><b>🎯 When to Use:</b> Used to measure network and communication speed.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Amount of Data = Data Transfer Rate × Time</li>
+<li>Time = Amount of Data ÷ Data Transfer Rate</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Speed equals data divided by time.</p>
+
+<p><b>⚠️ Common Mistake:</b> Ensure data and transfer rate use the same units (bits or bytes).</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Transmission Time</h3>
+
+<div class="formula-box">
+Transmission Time = File Size ÷ Data Transfer Rate
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the time required to send a file across a network.</p>
+
+<p><b>🎯 When to Use:</b> Used when estimating download or upload times.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>100 MB file ÷ 20 MB/s = 5 seconds</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Bigger files or slower speeds increase transmission time.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not mix MB with Mb without converting correctly.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Bandwidth</h3>
+
+<div class="formula-box">
+Bandwidth = Maximum Data Transfer Rate
+</div>
+
+<p><b>📖 Meaning:</b> The maximum amount of data that can be transmitted through a communication channel per second.</p>
+
+<p><b>🎯 When to Use:</b> Used to compare internet and network capacities.</p>
+
+<p><b>📝 Common Units:</b></p>
+
+<ul>
+<li>bps</li>
+<li>Kbps</li>
+<li>Mbps</li>
+<li>Gbps</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Higher bandwidth allows more data to pass each second.</p>
+
+<p><b>⚠️ Common Mistake:</b> Bandwidth is the maximum capacity, not always the actual speed.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Latency</h3>
+
+<div class="formula-box">
+Latency = Time Taken for Data to Travel from Source to Destination
+</div>
+
+<p><b>📖 Meaning:</b> Measures the delay before data begins to transfer.</p>
+
+<p><b>🎯 When to Use:</b> Used to evaluate network responsiveness, especially in gaming and video calls.</p>
+
+<p><b>📝 Common Unit:</b></p>
+
+<ul>
+<li>Milliseconds (ms)</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Lower latency means faster response.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse latency with bandwidth.</p>
+
+</div>
+<!-- ================= NETWORK SPEED ================= -->
+
+<h2 class="formula-topic">📂 Network Speed</h2>
+
+<div class="formula-card">
+
+<h3>Download Time</h3>
+
+<div class="formula-box">
+Download Time = File Size ÷ Download Speed
+</div>
+
+<p><b>📖 Meaning:</b> Calculates how long it takes to download a file from the internet.</p>
+
+<p><b>🎯 When to Use:</b> Used to estimate file download duration.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>File Size = Download Speed × Download Time</li>
+<li>Download Speed = File Size ÷ Download Time</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Bigger files or slower speeds take longer to download.</p>
+
+<p><b>⚠️ Common Mistake:</b> Ensure file size and speed are in compatible units (e.g., MB and MB/s).</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Upload Time</h3>
+
+<div class="formula-box">
+Upload Time = File Size ÷ Upload Speed
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the time needed to upload a file to the internet.</p>
+
+<p><b>🎯 When to Use:</b> Used when sending files to cloud storage or websites.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>200 MB ÷ 20 MB/s = 10 seconds</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> The formula is the same as download time.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse upload speed with download speed.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Network Efficiency</h3>
+
+<div class="formula-box">
+Network Efficiency (%) = (Actual Data Rate ÷ Maximum Data Rate) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Shows how efficiently a network is using its available bandwidth.</p>
+
+<p><b>🎯 When to Use:</b> Used to evaluate network performance.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Actual Data Rate = (Efficiency × Maximum Data Rate) ÷ 100</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Higher efficiency means better use of the network.</p>
+
+<p><b>⚠️ Common Mistake:</b> Use the same units for both data rates.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Packet Loss Percentage</h3>
+
+<div class="formula-box">
+Packet Loss (%) = (Lost Packets ÷ Total Packets Sent) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the percentage of data packets that fail to reach their destination.</p>
+
+<p><b>🎯 When to Use:</b> Used to assess network reliability and quality.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Lost Packets = (Packet Loss × Total Packets Sent) ÷ 100</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Lower packet loss means a more reliable network.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not divide by the number of packets received.</p>
+
+</div>
+<!-- ================= DATABASE CALCULATIONS ================= -->
+
+<h2 class="formula-topic">📂 Database Calculations</h2>
+
+<div class="formula-card">
+
+<h3>Total Number of Records</h3>
+
+<div class="formula-box">
+Total Records = Number of Rows
+</div>
+
+<p><b>📖 Meaning:</b> A record is a complete set of information stored as one row in a database table.</p>
+
+<p><b>🎯 When to Use:</b> Used to determine the total number of entries in a database.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>250 rows = 250 records</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> One row equals one record.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse records (rows) with fields (columns).</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Total Number of Fields</h3>
+
+<div class="formula-box">
+Total Fields = Number of Columns
+</div>
+
+<p><b>📖 Meaning:</b> A field stores one type of information and appears as a column.</p>
+
+<p><b>🎯 When to Use:</b> Used when designing or analysing database tables.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>Name, Age and Address = 3 fields</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> One column equals one field.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not count rows as fields.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Database Storage Size</h3>
+
+<div class="formula-box">
+Database Size = Number of Records × Record Size
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the total storage space required for a database.</p>
+
+<p><b>🎯 When to Use:</b> Used when estimating database storage requirements.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Record Size = Database Size ÷ Number of Records</li>
+<li>Records = Database Size ÷ Record Size</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Total size depends on both the number and size of records.</p>
+
+<p><b>⚠️ Common Mistake:</b> Ensure storage units are consistent (KB, MB, GB).</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Data Retrieval Percentage</h3>
+
+<div class="formula-box">
+Retrieval Percentage = (Records Retrieved ÷ Total Records) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the percentage of records returned after a query.</p>
+
+<p><b>🎯 When to Use:</b> Used when evaluating database search results.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Records Retrieved = (Retrieval Percentage × Total Records) ÷ 100</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Retrieved records are the records found by the query.</p>
+
+<p><b>⚠️ Common Mistake:</b> Divide by the total number of records, not the retrieved records.</p>
+
+</div>
+<!-- ================= FLOWCHARTS AND ALGORITHMS ================= -->
+
+<h2 class="formula-topic">📂 Flowcharts and Algorithms</h2>
+
+<div class="formula-card">
+
+<h3>Number of Iterations</h3>
+
+<div class="formula-box">
+Iterations = End Value − Start Value + 1
+</div>
+
+<p><b>📖 Meaning:</b> Calculates how many times a loop executes when it increases by 1.</p>
+
+<p><b>🎯 When to Use:</b> Used in FOR loops and algorithm tracing.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>FOR i = 1 TO 10</li>
+<li>Iterations = 10 − 1 + 1 = 10</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Count both the starting and ending values.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not forget to add 1 after subtracting.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Loop Execution with Step Value</h3>
+
+<div class="formula-box">
+Iterations = ((End − Start) ÷ Step) + 1
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the number of loop repetitions when the increment is greater than 1.</p>
+
+<p><b>🎯 When to Use:</b> Used in loops with custom step values.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>FOR i = 2 TO 10 STEP 2</li>
+<li>Iterations = ((10 − 2) ÷ 2) + 1 = 5</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Divide by the step before adding 1.</p>
+
+<p><b>⚠️ Common Mistake:</b> Use the correct step value.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Algorithm Efficiency</h3>
+
+<div class="formula-box">
+Efficiency = Work Done ÷ Time Taken
+</div>
+
+<p><b>📖 Meaning:</b> Compares how much work an algorithm performs relative to the time used.</p>
+
+<p><b>🎯 When to Use:</b> Used when comparing algorithm performance.</p>
+
+<p><b>📝 Note:</b></p>
+
+<ul>
+<li>A more efficient algorithm usually completes tasks faster.</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Faster algorithms are generally more efficient.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse efficiency with accuracy.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Time Complexity (Basic Rule)</h3>
+
+<div class="formula-box">
+Total Operations ≈ Number of Loops × Operations per Loop
+</div>
+
+<p><b>📖 Meaning:</b> Estimates the total number of operations an algorithm performs.</p>
+
+<p><b>🎯 When to Use:</b> Used for basic algorithm analysis and performance estimation.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>100 loop iterations × 5 operations = 500 operations</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> More loops usually mean more execution time.</p>
+
+<p><b>⚠️ Common Mistake:</b> Nested loops multiply the number of operations.</p>
+
+</div>
+<!-- ================= PROGRAMMING BASICS ================= -->
+
+<h2 class="formula-topic">📂 Programming Basics</h2>
+
+<div class="formula-card">
+
+<h3>Average Calculation</h3>
+
+<div class="formula-box">
+Average = Sum of Values ÷ Number of Values
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the average of a group of numbers in a program.</p>
+
+<p><b>🎯 When to Use:</b> Used in programming tasks involving marks, prices, temperatures and statistics.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Sum = Average × Number of Values</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Add first, then divide.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not divide before finding the total sum.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Percentage</h3>
+
+<div class="formula-box">
+Percentage = (Value ÷ Total Value) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the percentage of a value compared with the total.</p>
+
+<p><b>🎯 When to Use:</b> Used in grading systems, reports and data analysis programs.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Value = (Percentage × Total Value) ÷ 100</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Divide first, then multiply by 100.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not multiply before dividing.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Modulus (Remainder)</h3>
+
+<div class="formula-box">
+Remainder = Dividend MOD Divisor
+</div>
+
+<p><b>📖 Meaning:</b> Returns the remainder after division.</p>
+
+<p><b>🎯 When to Use:</b> Used to check even/odd numbers and solve programming problems.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>17 MOD 5 = 2</li>
+<li>20 MOD 4 = 0</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> MOD gives only the remainder, not the quotient.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse MOD with normal division.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Swap Two Variables</h3>
+
+<div class="formula-box">
+Temp = A<br>
+A = B<br>
+B = Temp
+</div>
+
+<p><b>📖 Meaning:</b> Exchanges the values of two variables using a temporary variable.</p>
+
+<p><b>🎯 When to Use:</b> Used in sorting algorithms and variable manipulation.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>If A = 5 and B = 9</li>
+<li>After swapping: A = 9, B = 5</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Store one value temporarily before replacing it.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not overwrite A before saving its original value.</p>
+
+</div>
+<!-- ================= SPREADSHEET FORMULAS ================= -->
+
+<h2 class="formula-topic">📂 Spreadsheet Formulas</h2>
+
+<div class="formula-card">
+
+<h3>SUM Function</h3>
+
+<div class="formula-box">
+=SUM(range)
+</div>
+
+<p><b>📖 Meaning:</b> Adds all the numbers in the selected range of cells.</p>
+
+<p><b>🎯 When to Use:</b> Used to calculate totals in spreadsheets.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>=SUM(A1:A10)</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> SUM means add everything in the selected range.</p>
+
+<p><b>⚠️ Common Mistake:</b> Ensure the correct cell range is selected.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>AVERAGE Function</h3>
+
+<div class="formula-box">
+=AVERAGE(range)
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the average (mean) of the selected values.</p>
+
+<p><b>🎯 When to Use:</b> Used for marks, sales, temperatures and other numerical data.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>=AVERAGE(B2:B20)</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> AVERAGE = Total ÷ Number of Values.</p>
+
+<p><b>⚠️ Common Mistake:</b> Blank cells are treated differently from cells containing zero.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>MAX and MIN Functions</h3>
+
+<div class="formula-box">
+=MAX(range)<br>
+=MIN(range)
+</div>
+
+<p><b>📖 Meaning:</b> Finds the largest and smallest values in a range of cells.</p>
+
+<p><b>🎯 When to Use:</b> Used to identify highest scores, lowest prices and extreme values.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>=MAX(C1:C15)</li>
+<li>=MIN(C1:C15)</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> MAX = Highest, MIN = Lowest.</p>
+
+<p><b>⚠️ Common Mistake:</b> Ensure only numeric cells are included where appropriate.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>COUNT Function</h3>
+
+<div class="formula-box">
+=COUNT(range)
+</div>
+
+<p><b>📖 Meaning:</b> Counts the number of cells containing numeric values.</p>
+
+<p><b>🎯 When to Use:</b> Used to determine how many numbers are in a dataset.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>=COUNT(D1:D100)</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> COUNT only counts numbers, not text.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse <b>COUNT</b> with <b>COUNTA</b>, which counts non-empty cells.</p>
+
+</div>
+<!-- ================= COMPUTER GRAPHICS ================= -->
+
+<h2 class="formula-topic">📂 Computer Graphics</h2>
+
+<div class="formula-card">
+
+<h3>Image Resolution</h3>
+
+<div class="formula-box">
+Resolution = Width × Height (Pixels)
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the total number of pixels that make up a digital image.</p>
+
+<p><b>🎯 When to Use:</b> Used to compare image quality and display resolution.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>1920 × 1080 = 2,073,600 pixels</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> More pixels generally produce sharper images.</p>
+
+<p><b>⚠️ Common Mistake:</b> Resolution is different from screen size.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Aspect Ratio</h3>
+
+<div class="formula-box">
+Aspect Ratio = Width : Height
+</div>
+
+<p><b>📖 Meaning:</b> Shows the proportional relationship between an image's width and height.</p>
+
+<p><b>🎯 When to Use:</b> Used in image editing, photography and video production.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>1920 × 1080 = 16:9</li>
+<li>1024 × 768 = 4:3</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Reduce the width and height to their simplest ratio.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse aspect ratio with image resolution.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Pixel Density (PPI)</h3>
+
+<div class="formula-box">
+PPI = Diagonal Pixels ÷ Screen Size (inches)
+</div>
+
+<p><b>📖 Meaning:</b> Measures the number of pixels per inch on a display.</p>
+
+<p><b>🎯 When to Use:</b> Used to compare display sharpness.</p>
+
+<p><b>📝 Formula:</b></p>
+
+<ul>
+<li>Diagonal Pixels = √(Width² + Height²)</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Higher PPI means a sharper display.</p>
+
+<p><b>⚠️ Common Mistake:</b> Use the diagonal screen size, not the width.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Colour Depth</h3>
+
+<div class="formula-box">
+Number of Colours = 2<sup>n</sup>
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the total number of colours that can be displayed using <b>n</b> bits.</p>
+
+<p><b>🎯 When to Use:</b> Used in image processing and graphics systems.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>8-bit = 256 colours</li>
+<li>24-bit = 16,777,216 colours</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Every extra bit doubles the number of available colours.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse colour depth with image resolution.</p>
+
+</div>
+<!-- ================= INTERNET AND WEB ================= -->
+
+<h2 class="formula-topic">📂 Internet and Web</h2>
+
+<div class="formula-card">
+
+<h3>Download Time</h3>
+
+<div class="formula-box">
+Download Time = File Size ÷ Download Speed
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the time required to download a file from the internet.</p>
+
+<p><b>🎯 When to Use:</b> Used to estimate download duration.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>500 MB ÷ 25 MB/s = 20 seconds</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Larger files or slower speeds increase download time.</p>
+
+<p><b>⚠️ Common Mistake:</b> Use the same units for file size and speed.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Upload Time</h3>
+
+<div class="formula-box">
+Upload Time = File Size ÷ Upload Speed
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the time needed to upload a file to the internet.</p>
+
+<p><b>🎯 When to Use:</b> Used when sending files to cloud storage or websites.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>300 MB ÷ 15 MB/s = 20 seconds</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> The same formula applies to both downloads and uploads.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse upload speed with download speed.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Website Loading Time</h3>
+
+<div class="formula-box">
+Loading Time = Total Page Size ÷ Internet Speed
+</div>
+
+<p><b>📖 Meaning:</b> Estimates how long a webpage takes to load.</p>
+
+<p><b>🎯 When to Use:</b> Used in website performance analysis.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>5 MB page ÷ 10 MB/s = 0.5 seconds</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Smaller pages load faster.</p>
+
+<p><b>⚠️ Common Mistake:</b> Actual loading time may also depend on server response and browser performance.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Bandwidth Utilization</h3>
+
+<div class="formula-box">
+Bandwidth Utilization (%) = (Used Bandwidth ÷ Total Bandwidth) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the percentage of available internet bandwidth currently in use.</p>
+
+<p><b>🎯 When to Use:</b> Used to monitor internet and network performance.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Used Bandwidth = (Utilization × Total Bandwidth) ÷ 100</li>
+<li>Available Bandwidth = Total Bandwidth − Used Bandwidth</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Higher utilization means more of the available bandwidth is being used.</p>
+
+<p><b>⚠️ Common Mistake:</b> Ensure both bandwidth values use the same unit (Mbps, Gbps, etc.).</p>
+
+</div>
+<!-- ================= CYBERSECURITY ================= -->
+
+<h2 class="formula-topic">📂 Cybersecurity</h2>
+
+<div class="formula-card">
+
+<h3>Password Strength</h3>
+
+<div class="formula-box">
+Password Space = (Number of Possible Characters)<sup>Password Length</sup>
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the total number of possible password combinations.</p>
+
+<p><b>🎯 When to Use:</b> Used to estimate password security against brute-force attacks.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>26 lowercase letters, 8 characters</li>
+<li>26<sup>8</sup> possible passwords</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Longer passwords increase security much more than slightly increasing character types.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not assume all passwords are equally difficult to guess if they use common words.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Encryption Key Space</h3>
+
+<div class="formula-box">
+Key Space = 2<sup>n</sup>
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the number of possible encryption keys for an <b>n</b>-bit key.</p>
+
+<p><b>🎯 When to Use:</b> Used to compare encryption strength.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>128-bit key = 2<sup>128</sup> possible keys</li>
+<li>256-bit key = 2<sup>256</sup> possible keys</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Every extra bit doubles the number of possible keys.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse key length with password length.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Detection Rate</h3>
+
+<div class="formula-box">
+Detection Rate (%) = (Threats Detected ÷ Total Threats) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Measures the percentage of threats successfully detected.</p>
+
+<p><b>🎯 When to Use:</b> Used to evaluate antivirus and intrusion detection systems.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Threats Detected = (Detection Rate × Total Threats) ÷ 100</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> A higher detection rate means better protection.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not divide by detected threats; divide by total threats.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Attack Success Rate</h3>
+
+<div class="formula-box">
+Attack Success Rate (%) = (Successful Attacks ÷ Total Attacks) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the percentage of cyber attacks that succeed.</p>
+
+<p><b>🎯 When to Use:</b> Used in cybersecurity analysis and risk assessment.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Successful Attacks = (Success Rate × Total Attacks) ÷ 100</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Lower attack success rates indicate stronger security.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse attack success rate with detection rate.</p>
+
+</div>
+<!-- ================= ARTIFICIAL INTELLIGENCE ================= -->
+
+<h2 class="formula-topic">📂 Artificial Intelligence</h2>
+
+<div class="formula-card">
+
+<h3>Accuracy</h3>
+
+<div class="formula-box">
+Accuracy = (Correct Predictions ÷ Total Predictions) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Measures the percentage of predictions made correctly by an AI model.</p>
+
+<p><b>🎯 When to Use:</b> Used to evaluate the overall performance of classification models.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>95 correct predictions out of 100 = 95% accuracy.</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Accuracy compares all correct predictions with the total number of predictions.</p>
+
+<p><b>⚠️ Common Mistake:</b> High accuracy alone does not always mean the model performs well on every class.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Precision</h3>
+
+<div class="formula-box">
+Precision = TP ÷ (TP + FP)
+</div>
+
+<p><b>📖 Meaning:</b> Measures how many positive predictions are actually correct.</p>
+
+<p><b>🎯 When to Use:</b> Used when false positives are costly.</p>
+
+<p><b>📝 Key:</b></p>
+
+<ul>
+<li>TP = True Positives</li>
+<li>FP = False Positives</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Precision focuses on the quality of positive predictions.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not confuse precision with recall.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Recall</h3>
+
+<div class="formula-box">
+Recall = TP ÷ (TP + FN)
+</div>
+
+<p><b>📖 Meaning:</b> Measures how many actual positive cases are correctly identified.</p>
+
+<p><b>🎯 When to Use:</b> Used when missing a positive case is costly.</p>
+
+<p><b>📝 Key:</b></p>
+
+<ul>
+<li>TP = True Positives</li>
+<li>FN = False Negatives</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Recall measures how many real positives are found.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not use false positives in the denominator.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>F1 Score</h3>
+
+<div class="formula-box">
+F1 = 2 × (Precision × Recall) ÷ (Precision + Recall)
+</div>
+
+<p><b>📖 Meaning:</b> Combines precision and recall into a single performance score.</p>
+
+<p><b>🎯 When to Use:</b> Used when both precision and recall are equally important.</p>
+
+<p><b>📝 Formula Tip:</b></p>
+
+<ul>
+<li>F1 Score ranges from 0 to 1.</li>
+<li>Higher values indicate better model performance.</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> F1 balances precision and recall.</p>
+
+<p><b>⚠️ Common Mistake:</b> Ensure precision and recall are calculated correctly before finding the F1 score.</p>
+
+</div>
+<!-- ================= COMPUTER APPLICATIONS ================= -->
+
+<h2 class="formula-topic">📂 Computer Applications</h2>
+
+<div class="formula-card">
+
+<h3>Percentage</h3>
+
+<div class="formula-box">
+Percentage = (Part ÷ Whole) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the percentage of a value relative to the total.</p>
+
+<p><b>🎯 When to Use:</b> Used in spreadsheets, databases, accounting software and data analysis.</p>
+
+<p><b>📝 Example:</b></p>
+
+<ul>
+<li>45 out of 60 = (45 ÷ 60) × 100 = 75%</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Divide first, then multiply by 100.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not multiply before dividing.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Profit</h3>
+
+<div class="formula-box">
+Profit = Selling Price − Cost Price
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the gain made after selling a product.</p>
+
+<p><b>🎯 When to Use:</b> Used in accounting, business and spreadsheet applications.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Selling Price = Cost Price + Profit</li>
+<li>Cost Price = Selling Price − Profit</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Profit means money gained.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not subtract in the wrong order.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Simple Interest</h3>
+
+<div class="formula-box">
+SI = (P × R × T) ÷ 100
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the interest earned or paid on a principal amount.</p>
+
+<p><b>🎯 When to Use:</b> Used in finance, banking and spreadsheet calculations.</p>
+
+<p><b>📝 Key:</b></p>
+
+<ul>
+<li>P = Principal</li>
+<li>R = Rate (%)</li>
+<li>T = Time</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Multiply P, R and T before dividing by 100.</p>
+
+<p><b>⚠️ Common Mistake:</b> Express the rate as a percentage.</p>
+
+</div>
+
+
+<div class="formula-card">
+
+<h3>Percentage Increase</h3>
+
+<div class="formula-box">
+Percentage Increase = ((New Value − Original Value) ÷ Original Value) × 100
+</div>
+
+<p><b>📖 Meaning:</b> Calculates the percentage by which a value has increased.</p>
+
+<p><b>🎯 When to Use:</b> Used in reports, statistics, finance and business software.</p>
+
+<p><b>📝 Formula Rearrangement:</b></p>
+
+<ul>
+<li>Increase = New Value − Original Value</li>
+</ul>
+
+<p><b>💡 Memory Tip:</b> Always compare the change with the original value.</p>
+
+<p><b>⚠️ Common Mistake:</b> Do not divide by the new value.</p>
+
+</div>
+
+
+
+
+
+<!-- ================= COMPUTER FORMULAS END HERE ================= -->
+
+<button class="back-btn"
+onclick="location.href='formula-home.html'">
+⬅️ Back to Formula Book
+</button>
+
+</div>
+
+<script src="computer-formula.js"></script>
+
+</body>
+</html>
